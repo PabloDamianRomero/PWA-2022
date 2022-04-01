@@ -2,24 +2,96 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css">
 
-    <title>Document</title>
+  <link rel="stylesheet" href="style/gral.css">
+  
+
+  <title>Ejercicio 00 - Tp01</title>
+  <style>
+    main {
+    background-image: url(https://images.pexels.com/photos/2803158/pexels-photo-2803158.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.msj-bienv{
+  font-size: 30px;
+  text-shadow: 0px 0px 5px white;
+}
+  </style>
 </head>
 
 <body>
-    <div class="container" style="background-color:#ccc">
-        <h1>Titulo</h1>
-        <p>Esto es una prueba de Bootstrap 5.</p>
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- enlaces menú -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Beneficios inmediatos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Maneja tu peso</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Imágenes</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Ingrese término" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center" style="background-color:rgba(255, 255, 255, 0.356); margin: 50px 0;">
+            <h1>Beneficios de la actividad física</h1>
+        </div>
     </div>
-    <div class="container" style="background-color:rgb(158, 218, 215)">
-        <p>* Crear una página HTML básica conformada por Encabezado, Menú, Pie y Contenido.</p>
     </div>
+  </header>
+
+  <main style="background-color: rgba(255, 255, 255, 0.322); height: 100vh;">
+    <!-- mensaje bienvenida -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-8 text-center msj-bienv" style="background-color:rgba(255, 255, 255, 0.24); margin: 50px 0;">
+            <p>Hacer actividad física regularmente es una de las cosas más importantes que puedes hacer por tu salud.</p>
+            <p>Todos pueden beneficiarse de la actividad física — no importa su edad, habilidades, etnicidad o la forma y tamaño de su cuerpo.</p>
+        </div>
+    </div>
+
+    <!-- enlaces -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-3 text-center">
+          <a class="btn btn-primary" href="ej07.html" role="button">Ej-07</a>
+        </div>
+    </div>
+    
+  </main>
+
+  <!-- footer -->
+  <footer class="mt-auto text-white-50 bg-black" style="height: 150px;">
+    <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+  </footer>
+
 </body>
 
 </html>
