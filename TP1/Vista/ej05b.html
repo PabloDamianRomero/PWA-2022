@@ -8,6 +8,37 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <title>Document</title>
+
+    <style>
+        .rectangulo {
+            border: 2px solid #fff;
+        }
+
+        .cuadrado {
+            height: 100px;
+            border: 2px solid #fff;
+        }
+
+        .rect-verde {
+            background-color: rgb(97, 209, 103);
+        }
+
+        .rect-cel {
+            background-color: rgb(97, 196, 209);
+        }
+
+        .cuadrado-azul {
+            background-color: rgb(79, 105, 255);
+        }
+
+        .cuadrado-gris {
+            background-color: rgb(192, 192, 192);
+        }
+
+        .cuadrado-nar {
+            background-color: rgb(216, 167, 76);
+        }
+    </style>
 </head>
 <!-- Creá una nueva página linkeada desde la página creada en el ejercicio 1, con la siguiente
 estructura, dentro del div de la clase container:
@@ -26,37 +57,37 @@ forma correspondiente. -->
 <body>
     <div class="container text-center">
         <div class="row">
-            <div class="col bg-success">
+            <div class="col rectangulo rect-verde">
                 <p>HEADER</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6 offset-lg-3   bg-info">
+            <div class="col-lg-3 col-md-3 col-sm-6 offset-lg-3 cuadrado cuadrado-azul">
                 <p>1</p>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6  bg-warning">
+            <div class="col-lg-3 col-md-3 col-sm-6  cuadrado cuadrado-azul">
                 <p>2</p>
             </div>
-            <div class="col-lg-3 d-none d-xxl-block d-xl-block d-lg-block ">
-                
+            <div class="col-lg-3 d-none d-xxl-block d-xl-block d-lg-block cuadrado">
+
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 bg-info">
+            <div class="col-lg-3 col-md-3 col-sm-6 cuadrado cuadrado-azul">
                 <p>3</p>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 offset-lg-6 bg-warning">
+            <div class="col-lg-3 col-md-3 col-sm-6 offset-lg-6 cuadrado cuadrado-azul">
                 <p>4</p>
             </div>
-            
+
         </div>
         <!-- <div class="row  ">
             funciona sin clear-fix y offaset lg 6
             <div class=" col-md-3 col-lg-3  bg-info">
                 <p></p>
             </div> -->
-            <!-- <div class=" col-md-3 col-lg-3   offset-lg-6 bg-warning">
+        <!-- <div class=" col-md-3 col-lg-3   offset-lg-6 bg-warning">
                 <p>4</p>
             </div> -->
-            <!-- <div class="col-lg-3   bg-info" >
+        <!-- <div class="col-lg-3   bg-info" >
                 <p>1</p>
             </div>
             <div class="col-lg-3 offset-lg-6 bg-warning">
@@ -71,16 +102,16 @@ forma correspondiente. -->
             <div class="col-md-3 col-lg-3 col-lg-pull-3" style="background-color:orange;">C</div>
             <div class="col-md-3 col-lg-3 col-lg-pull-9" style="background-color:lightblue;">D</div>
         </div> -->
-        <div class="row ">
-            <div class="col-md-3 col-lg-3 col-sm-6 order-lg-4" style="background-color:lavender;">A</div>
-            <div class="col-md-3 col-lg-3 col-sm-6 order-lg-3" style="background-color:green;">B</div>
-            <div class="col-md-3 col-lg-3 col-sm-6 order-lg-2" style="background-color:orange;">C</div>
-            <div class="col-md-3 col-lg-3 col-sm-6 order-lg-1" style="background-color:lightblue;">D</div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3 col-sm-6 order-lg-4 cuadrado cuadrado-gris">A</div>
+            <div class="col-md-3 col-lg-3 col-sm-6 order-lg-3 cuadrado cuadrado-gris">B</div>
+            <div class="col-md-3 col-lg-3 col-sm-6 order-lg-2 cuadrado cuadrado-gris">C</div>
+            <div class="col-md-3 col-lg-3 col-sm-6 order-lg-1 cuadrado cuadrado-gris">D</div>
         </div>
         <div class="row ">
-            <div class=" bg-info d-none d-lg-block">
+            <div class="d-none d-lg-block rectangulo rect-cel">
                 <p>
-                    <h1>DESKTOP</h1>
+                <h1>DESKTOP</h1>
                 </p>
             </div>
         </div>
@@ -92,14 +123,14 @@ forma correspondiente. -->
             </div>
         </div> -->
         <div class="row">
-            <div class="d-none bg-info d-sm-none d-xs-none d-lg-none d-md-block ">
+            <div class="d-none d-sm-none d-xs-none d-lg-none d-md-block rectangulo rect-cel">
                 <h2>TABLET</h2>
             </div>
 
         </div>
         <div class="row">
 
-            <div class=" d-md-none d-lg-none d-sm-block d-xs-block bg-info">
+            <div class=" d-md-none d-lg-none d-sm-block d-xs-block rectangulo rect-cel">
                 <h2>MOBILE</h2>
             </div>
         </div>
@@ -107,16 +138,16 @@ forma correspondiente. -->
         <div class="row ">
             <!-- <div class="  col-lg-3  col-md-6 offset-lg-3 bg-danger   "> -->
             <div
-                class="  bg-info col-lg-3 order-lg-1 offset-lg-3 col-md-6 order-md-2 d-none d-xxl-block d-xl-block d-md-block ">
+                class="col-lg-3 order-lg-1 offset-lg-3 col-md-6 order-md-2 d-none d-xxl-block d-xl-block d-md-block cuadrado cuadrado-nar">
                 <h2>:(</h2>
             </div>
             <!-- <div class="  d-none d-l-block d-xs-none d-sm-none  col-lg-3 col-md-6 bg-danger "> -->
-            <div class=" bg-warning col-lg-3 order-lg-2 col-md-6 order-md-1 ">
+            <div class="col-lg-3 order-lg-2 col-md-6 order-md-1 cuadrado cuadrado-nar">
                 <h2>:D</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col bg-success d-none d-sm-block ">
+            <div class="col d-none d-sm-block rect-verde">
                 <h2>FOOTER</h2>
             </div>
         </div>
