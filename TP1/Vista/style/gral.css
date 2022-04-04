@@ -1,3 +1,33 @@
-body{
-    background-color: rgb(177, 211, 238);
+body {
+  background-color: rgb(177, 211, 238);
+}
+
+main {
+  background-image: url(https://images.pexels.com/photos/2803158/pexels-photo-2803158.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.msj-bienv {
+  font-size: 30px;
+  text-shadow: 0px 0px 5px white;
+}
+
+.dropdown-toggle {
+  color: #707071;
+}
+
+.contenido-central{
+    /* height: 100vh; */
+    margin-bottom: 90px;
+}
+
+.bg-container {
+    background: rgb(255, 255, 255);
+}
+
+.tab-content {
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.521);
 }
