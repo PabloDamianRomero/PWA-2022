@@ -13,8 +13,53 @@
     <link rel="stylesheet" href="style/gral.css">
 
     <style>
-        .tam_img {
-            height: 75px;
+        .nav-tabs .nav-item.show .nav-link,
+        .nav-tabs .nav-link.active {
+            color: #ffffff;
+            font-weight: bold;
+            background-color: rgb(134 201 255);
+            border-color: #dee2e6 #00dcff #fff;
+        }
+
+        .img-miniaturas {
+            background-color: rgba(255, 255, 255, 0.521);
+        }
+
+        .fondo-subtitulo-cuadro {
+            background-color: rgba(255, 255, 255, 0.795);
+        }
+
+        .fondo-parrafo-cuadro {
+            background-color: rgb(134 201 255);
+            padding: 20px;
+        }
+
+        .fondo-lista-cuadro {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .fondo-img-grande {
+            background-color: rgba(255, 255, 255, 0.521);
+        }
+
+        .tab-pane p {
+            padding: 0 50px;
+        }
+
+        .tab-pane ul {
+            margin-left: 50px;
+        }
+
+        .img-grande {
+            margin-bottom: 50px;
+        }
+
+        .fondo-tabla {
+            background-color: rgb(134 201 255);
+        }
+
+        .fondo-parrafo-final {
+            background-color: rgb(209, 234, 255);
         }
     </style>
     <title>Ejercicio 11 - Tp01</title>
@@ -74,7 +119,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 text-center" style="background-color:rgba(255, 255, 255, 0.356); margin: 50px 0;">
-                    <h1>Beneficios de la actividad física</h1>
+                    <h1>Ejercicio 11</h1>
                 </div>
             </div>
         </div>
@@ -83,50 +128,40 @@
     <section class="contenido-central">
         <div class="container">
 
-            <div class="row border ">
-                <h1 class="bg-warning">Beneficios de la actividad fisica</h1>
+            <div class="row border fondo-subtitulo-cuadro">
+                <h2 class="text-center">Beneficios de la actividad física</h2>
             </div>
-            <div class="row border">
-                <div class="col-lg-12 bg-danger text-center ">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas hic modi sit nam, provident facilis
-                    aliquid repellendus dolorum quia. Voluptate ut numquam nemo esse! Cupiditate voluptates, vitae quasi
-                    libero ratione dolorem voluptas fuga suscipit placeat aut ullam ad. Aspernatur ipsum numquam alias
-                    perferendis iure in libero eum. Numquam cum fugit repellendus maiores tenetur doloribus hic ipsum,
-                    dolor
-                    velit magni et consequatur amet sapiente voluptatem alias aut, reiciendis a, natus sed eligendi
-                    labore
-                    non placeat minima ipsam! Laborum molestiae tempora nesciunt maxime magni unde facilis ab animi
-                    quidem.
-                    Quaerat inventore perferendis excepturi illum distinctio dolorum, id magni, voluptatem, natus a
-                    iure.
-
-
+            <div class="row border fondo-parrafo-cuadro">
+                <div class="col-lg-12 text-center">
+                    <p>La actividad física es esencial para el mantenimiento y mejora de la salud y la prevención de las
+                        enfermedades, para todas las personas y a cualquier edad. La actividad física contribuye a la
+                        prolongación de la vida y a mejorar su calidad, a través de beneficios fisiológicos,
+                        psicológicos y sociales, que han sido avalados por investigaciones científicas.</p>
                 </div>
             </div>
             <div class="row border">
-                <div class="col bg-danger text-center">
-                    <img class="tam_img" src="style/img/img04.jpg" alt="imagen de yoga">
-                    <img class="tam_img" src="style/img/bici.jpg" alt="Img de bici">
-                    <img class="tam_img" src="style/img/img01.jpg" alt="Correr">
-                    <img class="tam_img" src="style/img/natacion.jpg" alt="imagen de natacion">
-                    <img class="tam_img" src="style/img/abdominales.webp" alt="imagen de abdominales">
-                    <img class="tam_img" src="style/img/bailar.webp" alt="imagen de bailar">
-                    <img class="tam_img" src="style/img/caminar.jpg" alt="imagen de caminar">
-                    <img class="tam_img" src="style/img/cuerda.webp" alt="imagen de cuerda">
-                    <img class="tam_img" src="style/img/canotaje.webp" alt="imagen de canotaje">
-                    <img class="tam_img" src="style/img/patinar.jpg" alt="imagen de patinar">
-                    <img class="tam_img" src="style/img/sentadilla.webp" alt="imagen de sentadillas">
-                    <img class="tam_img" src="style/img/pilates.jpg" alt="imagen de pilates">
+                <div class="col text-center img-miniaturas">
+                    <img src="style/img/small/min_yoga.jpg" alt="imagen de yoga">
+                    <img src="style/img/small/min_bici.jpg" alt="Img de bici">
+                    <img src="style/img/small/min_correr.jpg" alt="Correr">
+                    <img src="style/img/small/min_natacion.jpg" alt="imagen de natacion">
+                    <img src="style/img/small/min_abdominales.jpg" alt="imagen de abdominales">
+                    <img src="style/img/small/min_bailar.jpg" alt="imagen de bailar">
+                    <img src="style/img/small/min_caminar.jpg" alt="imagen de caminar">
+                    <img src="style/img/small/min_cuerda.jpg" alt="imagen de cuerda">
+                    <img src="style/img/small/min_canotaje.jpg" alt="imagen de canotaje">
+                    <img src="style/img/small/min_patinar.jpg" alt="imagen de patinar">
+                    <img src="style/img/small/min_sentadilla.jpg" alt="imagen de sentadillas">
+                    <img src="style/img/small/min_pilates.jpg" alt="imagen de pilates">
 
                 </div>
             </div>
 
-            <div class="row border ">
-                <div class="col-sm-4   bg-success border">
-                    calumna, lista de nombre de cada imagen
-                    <ul class="nav nav-tabs mt-3 flex-column">
+            <div class="row border">
+                <div class="col-sm-4 border fondo-lista-cuadro">
+                    <ul class="nav nav-tabs mt-3 flex-column text-center">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#yoga">yoga</a>
+                            <a class="nav-link active" data-toggle="tab" href="#yoga">Yoga</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " data-toggle="tab" href="#bicicleta">Bicicleta</a>
@@ -135,7 +170,7 @@
                             <a class="nav-link " data-toggle="tab" href="#correr">Correr</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " data-toggle="tab" href="#natacion">Natacion</a>
+                            <a class="nav-link " data-toggle="tab" href="#natacion">Natación</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " data-toggle="tab" href="#abdominales">Abdominales</a>
@@ -165,11 +200,12 @@
                     </ul>
                 </div>
 
-                <div class="col-sm-8 bg-success border">
-                    Una imagen ( de las 12 de arriba )
+                <div class="col-sm-8 border fondo-img-grande">
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="yoga">
-                            <img class="img-fluid" src="style/img/img04.jpg" alt="imagen de yoga">
+                            <div class="text-center img-grande">
+                                <img class="img-fluid" src="style/img/big/yoga.jpg" alt="imagen de yoga">
+                            </div>
                             <p>El yoga es una práctica que conecta el cuerpo, la respiración y la mente. Esta práctica
                                 utiliza posturas físicas, ejercicios de respiración y meditación para mejorar la salud
                                 general. El yoga se desarrolló como una práctica espiritual hace miles de años. Hoy en
@@ -187,9 +223,8 @@
                             </ul>
                         </div>
                         <div class="tab-pane fade" id="bicicleta">
-                            <div class="text-center">
-
-                                <img style="height:400px" src="style/img/bici.jpg" alt="bici">
+                            <div class="text-center img-grande">
+                                <img class="img-fluid" src="style/img/big/bici.jpg" alt="bici">
                             </div>
                             <p>Montar en bicicleta tiene muchos beneficios para tu salud, por ejemplo, a nivel
                                 cardiovascular, circulatorio y respiratorio. Además, tonifica las piernas y reduce la
@@ -207,9 +242,8 @@
 
                         </div>
                         <div class="tab-pane fade" id="correr">
-                            <div class="text-center">
-
-                                <img class="img-fluid" style="height:400px" src="style/img/img01.jpg" alt=" imgcorrer">
+                            <div class="text-center img-grande">
+                                <img class="img-fluid" src="style/img/big/correr.jpg" alt="Correr">
                             </div>
                             <p>Realizar cualquier tipo de actividad física o practicar determinado deporte con
                                 regularidad es bueno para la salud, por lo que muchas personas aprovechan los múltiples
@@ -226,10 +260,8 @@
 
                         </div>
                         <div class="tab-pane fade" id="natacion">
-                            <div class="text-center">
-
-                                <img class="img-fluid" style="height:400px" src="style/img/natacion.jpg"
-                                    alt="img natacion">
+                            <div class="text-center img-grande">
+                                <img class="img-fluid" src="style/img/big/natacion.jpg" alt="img natacion">
                             </div>
                             <p>Pocos ejercicios son tan completos y divertidos como la natación. No solo combina el
                                 desarrollo físico con el mental, sino que también se adapta a los distintos niveles de
@@ -249,9 +281,8 @@
 
                         </div>
                         <div class="tab-pane fade" id="bicicleta">
-                            <div class="text-center">
-
-                                <img style="height:400px" src="style/img/bici.jpg" alt="bici">
+                            <div class="text-center img-grande">
+                                <img src="style/img/big/bici.jpg" alt="bici">
                             </div>
                             <p>Montar en bicicleta tiene muchos beneficios para tu salud, por ejemplo, a nivel
                                 cardiovascular, circulatorio y respiratorio. Además, tonifica las piernas y reduce la
@@ -269,10 +300,8 @@
 
                         </div>
                         <div class="tab-pane fade" id="abdominales">
-                            <div class="text-center">
-
-                                <img class="img-fluid" style="height:400px" src="style/img/abdominales.webp"
-                                    alt="img abdominales">
+                            <div class="text-center img-grande">
+                                <img class="img-fluid" src="style/img/big/abdominales.jpg" alt="img abdominales">
                             </div>
                             <p>Los abdominales son uno de los ejercicios físicos por excelencia. Junto con las carreras
                                 y las flexiones, los abdominales han formado parte de casi cualquier rutina de
@@ -290,10 +319,8 @@
 
                         </div>
                         <div class="tab-pane fade" id="bailar">
-                            <div class="text-center">
-
-                                <img class="img-fluid" style="height:400px" src="style/img/bailar.webp"
-                                    alt="imagen de bailar">
+                            <div class="text-center img-grande">
+                                <img class="img-fluid" src="style/img/big/bailar.jpg" alt="imagen de bailar">
                             </div>
                             <p>El baile combina los beneficios del ejercicio aeróbico con los del ejercicio de soporte
                                 de peso. Al bailar, usted puede obtener muchos beneficios de salud mental y física, lo
@@ -312,10 +339,8 @@
 
                         </div>
                         <div class="tab-pane fade" id="caminar">
-                            <div class="text-center">
-
-                                <img class="img-fluid" style="height:400px" src="style/img/caminar.jpg"
-                                    alt="imagen de caminar">
+                            <div class="text-center img-grande">
+                                <img class="img-fluid" src="style/img/big/caminar.jpg" alt="imagen de caminar">
                             </div>
                             <p>Todo el mundo intuye que caminar es bueno para la salud, pero cuando leas estos 16
                                 beneficios de caminar, quedarás perplejo de lo importante para tu vida que puede llegar
@@ -334,10 +359,8 @@
 
                         </div>
                         <div class="tab-pane fade" id="cuerda">
-                            <div class="text-center">
-
-                                <img class="img-fluid" style="height:400px" src="style/img/cuerda.webp"
-                                    alt="imagen de cuerda">
+                            <div class="text-center img-grande">
+                                <img class="img-fluid" src="style/img/big/cuerda.jpg" alt="imagen de cuerda">
                             </div>
                             <p>Un minuto saltando la cuerda al día no sólo te brindará beneficios para la salud, sino
                                 que también te hará trabajar la mayoría de los músculos, te ayudará a mejorar tu balance
@@ -354,10 +377,8 @@
 
                         </div>
                         <div class="tab-pane fade" id="canotaje">
-                            <div class="text-center">
-
-                                <img class="img-fluid"  src="style/img/canotaje.webp"
-                                    alt="imagen de canotaje">
+                            <div class="text-center img-grande">
+                                <img class="img-fluid" src="style/img/big/canotaje.jpg" alt="imagen de canotaje">
                             </div>
                             <p>El Canotaje es un deporte acuático que requiere de una embarcación, en la que una, dos o
                                 tres personas reman de manera individual o en quipo. Existen dos modalidades de
@@ -378,11 +399,14 @@
 
                         </div>
                         <div class="tab-pane fade" id="patinar">
-                            <div class="text-center">
-
-                                <img class="img-fluid" style="height:400px" src="style/img/patinar.jpg" alt="img patinar">
+                            <div class="text-center img-grande">
+                                <img class="img-fluid" src="style/img/big/patinar.jpg" alt="img patinar">
                             </div>
-                            <p>El patinaje es un deporte que se practica deslizándose sobre el suelo encima de unos patines. Existen dos modalidades: en línea o sobre hielo. En línea cuando nos desplazamos sobre el suelo usando unos patines con ruedas y sobre hielo cuando el desplazamiento se realiza mediante una cuchilla sobre una pista de hielo. En ambos casos, puede dar lugar a otros deportes. Como por ejemplo el hockey.</p>
+                            <p>El patinaje es un deporte que se practica deslizándose sobre el suelo encima de unos
+                                patines. Existen dos modalidades: en línea o sobre hielo. En línea cuando nos
+                                desplazamos sobre el suelo usando unos patines con ruedas y sobre hielo cuando el
+                                desplazamiento se realiza mediante una cuchilla sobre una pista de hielo. En ambos
+                                casos, puede dar lugar a otros deportes. Como por ejemplo el hockey.</p>
                             <ul>
 
                                 <li>Mejora el tono muscular de las piernas </li>
@@ -395,11 +419,13 @@
 
                         </div>
                         <div class="tab-pane fade" id="sentadillas">
-                            <div class="text-center">
-
-                                <img class="img-fluid" src="style/img/sentadilla.webp" alt="imagen de sentadilla">
+                            <div class="text-center img-grande">
+                                <img class="img-fluid" src="style/img/big/sentadilla.jpg" alt="imagen de sentadilla">
                             </div>
-                            <p>Sirven para trabajar directamente los músculos de las caderas, glúteos y muslos, y fortalecer los huesos, ligamentos y tendones. Además, las sentadillas son uno de los tres movimientos que integran el levantamiento de potencia y son excelentes para el desarrollo y tonificación de las piernas.</p>
+                            <p>Sirven para trabajar directamente los músculos de las caderas, glúteos y muslos, y
+                                fortalecer los huesos, ligamentos y tendones. Además, las sentadillas son uno de los
+                                tres movimientos que integran el levantamiento de potencia y son excelentes para el
+                                desarrollo y tonificación de las piernas.</p>
                             <ul>
 
                                 <li>Aumenta la fuerza</li>
@@ -407,16 +433,18 @@
                                 <li>Mejora la movilidad</li>
                                 <li>Estabiliza tu cuerpo</li>
                                 <li>Útil para tu espalda</li>
-                                
+
                             </ul>
 
                         </div>
                         <div class="tab-pane fade" id="pilates">
-                            <div class="text-center">
-
-                                <img class="img-fluid" src="style/img/pilates.jpg" alt="imagen de pilates">
+                            <div class="text-center img-grande">
+                                <img class="img-fluid" src="style/img/big/pilates.jpg" alt="imagen de pilates">
                             </div>
-                            <p>El Método Pilates o simplemente pilates es un deporte en el que se trabajan el cuerpo y la mente, y cuyos objetivos principales son reforzar la musculatura (desde la más profunda a la más superficial), aumentar la fuerza y la flexibilidad del cuerpo y mejorar la capacidad de concentración.</p>
+                            <p>El Método Pilates o simplemente pilates es un deporte en el que se trabajan el cuerpo y
+                                la mente, y cuyos objetivos principales son reforzar la musculatura (desde la más
+                                profunda a la más superficial), aumentar la fuerza y la flexibilidad del cuerpo y
+                                mejorar la capacidad de concentración.</p>
                             <ul>
 
                                 <li>Aumenta la flexibilidad, la agilidad y la coordinación de los movimientos.</li>
@@ -424,7 +452,8 @@
                                 <li>Aporta vitalidad y fuerza.</li>
                                 <li>Es útil para conocer mejor el propio cuerpo.</li>
                                 <li>Previene de lesiones musculares y ayuda en procesos de rehabilitación.</li>
-                                <li>Combate el estrés y la ansiedad a través del control de la respiración y de la concentración.</li>
+                                <li>Combate el estrés y la ansiedad a través del control de la respiración y de la
+                                    concentración.</li>
                             </ul>
 
                         </div>
@@ -436,8 +465,8 @@
 
 
             <div class="row border">
-                <div class="col-sm-8 bg-info border ">
-                    <table class="table ">
+                <div class="col-sm-8 border fondo-tabla">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -463,15 +492,12 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="col-sm-4 bg-info border ">
-
-                    Parrafo Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, minima? Deleniti quia porro
-                    optio dolores et ad obcaecati nisi beatae, pariatur mollitia dolorum nesciunt? Eligendi quae porro
-                    illo
-                    pariatur delectus ipsam, animi, atque eos voluptatem veniam nulla nobis beatae reiciendis hic
-                    dolore.
-                    Aperiam accusamus nobis cupiditate laudantium, sint impedit sequi.
-
+                <div class="col-sm-4 border fondo-parrafo-final">
+                    <p class="fw-bold text-center">¿Sabías qué la inactividad física es el cuarto factor de riesgo de
+                        mortalidad a nivel mundial?</p>
+                    <p>La OMS define la actividad física como cualquier movimiento corporal producido por los músculos
+                        esqueléticos, con el consiguiente consumo de energía. Ello incluye las actividades realizadas al
+                        trabajar, jugar y viajar, las tareas domésticas y las actividades recreativas.</p>
                 </div>
             </div>
 
@@ -487,13 +513,15 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+        </script>
+
+    <script src="bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
