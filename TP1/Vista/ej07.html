@@ -20,6 +20,7 @@
     <title>Ejercicio 07 - Tp01</title>
 
     <style>
+        /* estilos para lista desordenada del ej7 (tabs dinamicos) */
         main ul {
             background-color: #ffffffde;
         }
@@ -28,10 +29,6 @@
             padding: 8px;
         }
 
-        h3 {
-            background-color: #ffffffde;
-            margin-bottom: 40px;
-        }
     </style>
 
 </head>
@@ -90,14 +87,14 @@
         <!-- Navbar -->
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 text-center" style="background-color:rgba(255, 255, 255, 0.356); margin: 50px 0;">
+                <div class="col-12 text-center primer-titulo-pagina">
                     <h1>Ejercicio 7: Usando Tabs</h1>
                 </div>
             </div>
         </div>
     </header>
 
-    <main style="background-color: rgba(255, 255, 255, 0.322);">
+    <main>
         <!-- mensaje bienvenida -->
         <div class="container">
             <div class="row justify-content-center">
@@ -111,78 +108,77 @@
             </div>
 
             <!-- tabs dinámincas -->
-            <div class="container">
-                <h3 class="text-center"> Qué hacer antes y después de hacer ejercicio</h3>
-                <div class="row justify-content-center">
-                    <div class="col-sm-8 ">
-                        <ul class="nav nav-tabs mt-3">
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#opcion1">Antes de empezar </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#opcion2">Al terminar</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane fade show active" id="opcion1">
-                                <ul>
-                                    <li>
-                                        Adapta tu alimentación al tipo de esfuerzo que realizas. Haz comidas ligeras y
-                                        frecuentes.
-                                        <ul>
-                                            <li>Come algo rico en hidratos de carbono (fruta, cereales o un pequeño
-                                                bocadillo) alrededor
-                                                de dos horas antes empezar a realizar la actividad.</li>
-                                            <li>No hagas actividad física al terminar de comer.</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        Si las actividades son al aire libre ten en cuenta las condiciones
-                                        climatológicas y
-                                        adecúa tu ropa, la comida y el agua necesarios.
-                                        <ul>
-                                            <li>Viste ropa y calzado cómodos y adecuados.</li>
-                                            <li>Toma medidas de protección ante los factores ambientales como el calor,
-                                                el frío, el
-                                                agua, el sol, la altura, el terreno. Ten especial precaución al hacer
-                                                actividades
-                                                intensas en ambientes muy calurosos.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>Haz ejercicios de calentamiento (5-10 minutos) y estiramiento. Así reduces el
-                                        riesgo de
-                                        lesiones y minimizas la posibilidad de complicaciones cardiovasculares.</li>
-                                </ul>
-
-
-
-
-
-
-                            </div>
-                            <div class="tab-pane fade" id="opcion2">
-                                <ul>
-                                    <li>
-                                        Es importante que termines de hacer ejercicio de manera progresiva, siempre
-                                        pasando de
-                                        una mayor a una menor intensidad.
-                                    <li>
-                                        No olvides realizar estiramientos.
-                                    </li>
-                                    <li>
-                                        Sécate el sudor y cámbiate de ropa para evitar enfriarte.
-                                    </li>
-                                    <li>
-                                        Bebe agua y come algo sólido que contenga hidratos de carbono y proteínas.
-                                    </li>
-
-                                </ul>
+            <section class="contenido-central">
+                <div class="container">
+                    <h3 class="text-center">Qué hacer antes y después de hacer ejercicio</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 ">
+                            <ul class="nav nav-tabs mt-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#opcion1">Antes de empezar </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#opcion2">Al terminar</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="opcion1">
+                                    <ul>
+                                        <li>
+                                            Adapta tu alimentación al tipo de esfuerzo que realizas. Haz comidas ligeras
+                                            y
+                                            frecuentes.
+                                            <ul>
+                                                <li>Come algo rico en hidratos de carbono (fruta, cereales o un pequeño
+                                                    bocadillo) alrededor
+                                                    de dos horas antes empezar a realizar la actividad.</li>
+                                                <li>No hagas actividad física al terminar de comer.</li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            Si las actividades son al aire libre ten en cuenta las condiciones
+                                            climatológicas y
+                                            adecúa tu ropa, la comida y el agua necesarios.
+                                            <ul>
+                                                <li>Viste ropa y calzado cómodos y adecuados.</li>
+                                                <li>Toma medidas de protección ante los factores ambientales como el
+                                                    calor,
+                                                    el frío, el
+                                                    agua, el sol, la altura, el terreno. Ten especial precaución al
+                                                    hacer
+                                                    actividades
+                                                    intensas en ambientes muy calurosos.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>Haz ejercicios de calentamiento (5-10 minutos) y estiramiento. Así reduces
+                                            el
+                                            riesgo de
+                                            lesiones y minimizas la posibilidad de complicaciones cardiovasculares.</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="opcion2">
+                                    <ul>
+                                        <li>
+                                            Es importante que termines de hacer ejercicio de manera progresiva, siempre
+                                            pasando de
+                                            una mayor a una menor intensidad.
+                                        <li>
+                                            No olvides realizar estiramientos.
+                                        </li>
+                                        <li>
+                                            Sécate el sudor y cámbiate de ropa para evitar enfriarte.
+                                        </li>
+                                        <li>
+                                            Bebe agua y come algo sólido que contenga hidratos de carbono y proteínas.
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
 
     </main>

@@ -2,19 +2,19 @@ body {
   background-color: rgb(177, 211, 238);
 }
 
-main {
+/* main {
   background-image: url(https://images.pexels.com/photos/2803158/pexels-photo-2803158.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
+} */
 
 .msj-bienv {
   font-size: 30px;
   text-shadow: 0px 0px 5px white;
 }
 
-.msj-bienv p{
+.msj-bienv p {
   background-color: rgba(255, 255, 255, 0.603);
   padding: 8px;
 }
@@ -23,16 +23,82 @@ main {
   color: #707071;
 }
 
-.contenido-central{
-    /* height: 100vh; */
-    margin-bottom: 90px;
+.contenido-central {
+  margin-bottom: 90px;
 }
 
-.bg-container {
-    background: rgb(255, 255, 255);
+.primer-titulo-pagina {
+  background-color: rgba(255, 255, 255, 0.356);
+  margin: 50px 0;
+}
+
+.primer-titulo-pagina h3 {
+  background-color: inherit;
+}
+
+h3 {
+  background-color: #ffffffde;
+  margin-bottom: 40px;
+}
+
+/* tabs */
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: #ffffff;
+  font-weight: bold;
+  background-color: rgb(134 201 255);
+  border-color: #dee2e6 #00dcff #fff;
 }
 
 .tab-content {
-    padding: 50px 20px;
-    background-color: rgba(255, 255, 255, 0.521);
+  padding: 50px 20px;
+  background-color: rgba(255, 255, 255, 0.521);
+}
+
+.tab-pane p {
+  padding: 0 50px;
+}
+
+/* EJERCICIO 5 */
+.altura-caja .row {
+  margin: 10px 0;
+  height: 250px;
+}
+
+.caja-blanca-ej5y6 {
+  background: rgba(255, 255, 255, 0.753);
+}
+
+/* EJERCICIO 11 */
+.img-miniaturas {
+  background-color: rgba(255, 255, 255, 0.521);
+}
+
+.fondo-subtitulo-cuadro {
+  background-color: rgba(255, 255, 255, 0.795);
+}
+
+.fondo-parrafo-cuadro {
+  background-color: rgb(134 201 255);
+  padding: 20px;
+}
+
+.fondo-lista-cuadro {
+  background-color: rgb(255, 255, 255);
+}
+
+.fondo-img-grande {
+  background-color: rgba(255, 255, 255, 0.521);
+}
+
+.img-grande {
+  margin-bottom: 50px;
+}
+
+.fondo-tabla {
+  background-color: rgb(134 201 255);
+}
+
+.fondo-parrafo-final {
+  background-color: rgb(209, 234, 255);
 }
