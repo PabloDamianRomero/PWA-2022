@@ -18,6 +18,11 @@
     <link rel="stylesheet" href="style/gral.css">
 
     <title>Ejercicio 11 - Tp01</title>
+    <style>
+        a.nav-link.active {
+            background-color: rgb(134 201 255);
+        }
+    </style>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -97,67 +102,108 @@
                 </div>
             </div>
             <!-- fila imágenes en miniatura -->
-            <div class="row border">
-                <div class="col text-center img-miniaturas">
-                    <img src="style/img/small/min_yoga.jpg" alt="imagen de yoga">
-                    <img src="style/img/small/min_bici.jpg" alt="Img de bici">
-                    <img src="style/img/small/min_correr.jpg" alt="Correr">
-                    <img src="style/img/small/min_natacion.jpg" alt="imagen de natacion">
-                    <img src="style/img/small/min_abdominales.jpg" alt="imagen de abdominales">
-                    <img src="style/img/small/min_bailar.jpg" alt="imagen de bailar">
-                    <img src="style/img/small/min_caminar.jpg" alt="imagen de caminar">
-                    <img src="style/img/small/min_cuerda.jpg" alt="imagen de cuerda">
-                    <img src="style/img/small/min_canotaje.jpg" alt="imagen de canotaje">
-                    <img src="style/img/small/min_patinar.jpg" alt="imagen de patinar">
-                    <img src="style/img/small/min_sentadilla.jpg" alt="imagen de sentadillas">
-                    <img src="style/img/small/min_pilates.jpg" alt="imagen de pilates">
+            <div class="row border ">
+                <div class="col  img-miniaturas">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#opcion1"><img
+                                    src="style/img/small/min_yoga.jpg" alt="imagen de yoga"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#opcion2"><img
+                                    src="style/img/small/min_bici.jpg" alt="Img de bici"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#opcion3"><img
+                                    src="style/img/small/min_correr.jpg" alt="Correr"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#opcion4"><img
+                                    src="style/img/small/min_natacion.jpg" alt="imagen de natacion"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#opcion5"><img
+                                    src="style/img/small/min_abdominales.jpg" alt="imagen de abdominales"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#opcion6"><img
+                                    src="style/img/small/min_bailar.jpg" alt="imagen de bailar"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#opcion7"><img
+                                    src="style/img/small/min_caminar.jpg" alt="imagen de caminar"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#opcion8"><img
+                                    src="style/img/small/min_cuerda.jpg" alt="imagen de cuerda"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#opcion9"><img
+                                    src="style/img/small/min_canotaje.jpg" alt="imagen de canotaje"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#opcion10"><img
+                                    src="style/img/small/min_patinar.jpg" alt="imagen de patinar"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#opcion11"><img
+                                    src="style/img/small/min_sentadilla.jpg" alt="imagen de sentadillas"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#opcion12"><img
+                                    src="style/img/small/min_pilates.jpg" alt="imagen de pilates"></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            
+
 
             <div class="tab-content" style="padding: 0;">
                 <!-- -------------------------------------------------------------------------------------------------------------- -->
                 <!-- inicio contenido de YOGA-->
-                <div class="tab-pane fade show active" id="yoga">
+                <div class="tab-pane fade show active" id="opcion1">
                     <div class="row border">
                         <!-- columna con lista (enlaces) -->
                         <div class="col-sm-4 border fondo-lista-cuadro">
-                            <ul class="nav nav-tabs mt-3 flex-column text-center">
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#yoga">Yoga</a>
+                            <ul class="nav flex-column text-center">
+                                <li class="nav-item" style="color: #ffffff;
+                                font-weight: bold;
+                                background-color: rgb(134 201 255);
+                                border-color: #dee2e6 #00dcff #fff;">
+                                    Yoga
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#bicicleta">Bicicleta</a>
+                                <li class="nav-item d-none d-lg-block d-md-block d-sm-block">
+                                    <a class="nav-link">Bicicleta</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#correr">Correr</a>
+                                <li class="nav-item d-none d-lg-block d-md-block d-sm-block">
+                                    <a class="nav-link">Correr</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#natacion">Natación</a>
+                                <li class="nav-item d-none d-lg-block d-md-block d-sm-block">
+                                    <a class="nav-link">Natación</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#abdominales">Abdominales</a>
+                                <li class="nav-item d-none d-lg-block d-md-block d-sm-block">
+                                    <a class="nav-link">Abdominales</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#bailar">Bailar</a>
+                                <li class="nav-item d-none d-lg-block d-md-block d-sm-block">
+                                    <a class="nav-link">Bailar</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#caminar">Caminar</a>
+                                <li class="nav-item d-none d-lg-block d-md-block d-sm-block">
+                                    <a class="nav-link">Caminar</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#cuerda">Saltar la soga</a>
+                                <li class="nav-item d-none d-lg-block d-md-block d-sm-block">
+                                    <a class="nav-link">Saltar la soga</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#canotaje">Canotaje</a>
+                                <li class="nav-item d-none d-lg-block d-md-block d-sm-block">
+                                    <a class="nav-link">Canotaje</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#patinar">Patinar</a>
+                                <li class="nav-item d-none d-lg-block d-md-block d-sm-block">
+                                    <a class="nav-link">Patinar</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#sentadillas">Sentadillas</a>
+                                <li class="nav-item d-none d-lg-block d-md-block d-sm-block">
+                                    <a class="nav-link">Sentadillas</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#pilates">Pilates</a>
+                                <li class="nav-item d-none d-lg-block d-md-block d-sm-block">
+                                    <a class="nav-link">Pilates</a>
                                 </li>
                             </ul>
                         </div> <!-- cierre de columna lista (enlaces)-->
@@ -207,52 +253,65 @@
                         </div><!-- cierre de columna con tabla -->
                         <!-- columna con párrafo -->
                         <div class="col-sm-4 border fondo-parrafo-final">
-                            <p>Beneficios del yoga: </p><ul><li>Reducir su presión arterial y su frecuencia cardíaca</li><li>Ayudarle a relajarse</li><li>Mejorar su confianza en usted mismo</li><li>Mejorar su coordinación</li><li>Reducir el estrés</li><li>Mejorar su concentración</li><li>Ayudarle a dormir mejor</li><li>Ayudar a la digestión</li></ul>
+                            <p>Beneficios del yoga: </p>
+                            <ul>
+                                <li>Reducir su presión arterial y su frecuencia cardíaca</li>
+                                <li>Ayudarle a relajarse</li>
+                                <li>Mejorar su confianza en usted mismo</li>
+                                <li>Mejorar su coordinación</li>
+                                <li>Reducir el estrés</li>
+                                <li>Mejorar su concentración</li>
+                                <li>Ayudarle a dormir mejor</li>
+                                <li>Ayudar a la digestión</li>
+                            </ul>
                         </div><!-- cierre de columna con párrafo -->
                     </div><!-- cierre de fila con 2 columnas (tabla/parrafo) -->
                 </div><!-- cierre de tab-pane yoga-->
                 <!-- -------------------------------------------------------------------------------------------------------------- -->
                 <!-- inicio contenido de BICICLETA -->
-                <div class="tab-pane fade" id="bicicleta">
+                <div class="tab-pane" id="opcion2">
                     <div class="row border">
                         <!-- columna con lista (enlaces) -->
                         <div class="col-sm-4 border fondo-lista-cuadro ">
-                            <ul class="nav nav-tabs mt-3 flex-column text-center">
+                            <ul class="nav flex-column text-center">
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#yoga">Yoga</a>
+                                    <a class="nav-link">Yoga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bicicleta">Bicicleta</a>
+                                    <a class="nav-link" style="color: #ffffff;
+                                    font-weight: bold;
+                                    background-color: rgb(134 201 255);
+                                    border-color: #dee2e6 #00dcff #fff;">Bicicleta</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#correr">Correr</a>
+                                    <a class="nav-link">Correr</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#natacion">Natación</a>
+                                    <a class="nav-link">Natación</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#abdominales">Abdominales</a>
+                                    <a class="nav-link">Abdominales</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bailar">Bailar</a>
+                                    <a class="nav-link">Bailar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#caminar">Caminar</a>
+                                    <a class="nav-link">Caminar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#cuerda">Saltar la soga</a>
+                                    <a class="nav-link">Saltar la soga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#canotaje">Canotaje</a>
+                                    <a class="nav-link">Canotaje</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#patinar">Patinar</a>
+                                    <a class="nav-link">Patinar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#sentadillas">Sentadillas</a>
+                                    <a class="nav-link">Sentadillas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#pilates">Pilates</a>
+                                    <a class="nav-link">Pilates</a>
                                 </li>
                             </ul>
                         </div> <!-- cierre de columna lista (enlaces)-->
@@ -301,52 +360,63 @@
                         </div><!-- cierre de columna con tabla -->
                         <!-- columna con párrafo -->
                         <div class="col-sm-4 border fondo-parrafo-final">
-                            <p>Beneficios de andar en bicicleta: </p><ul><li>Oxigena el cerebro y combate el estrés</li><li>Tonifica y fortalece la espalda</li><li>Corazón fuerte</li><li>Sistema inmunológico resistente</li><li>Corazón fuerte</li><li>Adiós a la celulitis</li></ul>
+                            <p>Beneficios de andar en bicicleta: </p>
+                            <ul>
+                                <li>Oxigena el cerebro y combate el estrés</li>
+                                <li>Tonifica y fortalece la espalda</li>
+                                <li>Corazón fuerte</li>
+                                <li>Sistema inmunológico resistente</li>
+                                <li>Corazón fuerte</li>
+                                <li>Adiós a la celulitis</li>
+                            </ul>
                         </div><!-- cierre de columna con párrafo -->
                     </div><!-- cierre de fila con 2 columnas (tabla/parrafo) -->
                 </div><!-- cierre de tab-pane bici-->
                 <!-- -------------------------------------------------------------------------------------------------------------- -->
                 <!-- inicio contenido CORRER -->
-                <div class="tab-pane fade" id="correr">
+                <div class="tab-pane" id="opcion3">
                     <div class="row border">
                         <!-- columna con lista (enlaces) -->
                         <div class="col-sm-4 border fondo-lista-cuadro ">
-                            <ul class="nav nav-tabs mt-3 flex-column text-center">
+                            <ul class="nav flex-column text-center">
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#yoga">Yoga</a>
+                                    <a class="nav-link">Yoga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bicicleta">Bicicleta</a>
+                                    <a class="nav-link">Bicicleta</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#correr">Correr</a>
+                                    <a class="nav-link" style="color: #ffffff;
+                                    font-weight: bold;
+                                    background-color: rgb(134 201 255);
+                                    border-color: #dee2e6 #00dcff #fff;">Correr</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#natacion">Natación</a>
+                                    <a class="nav-link">Natación</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#abdominales">Abdominales</a>
+                                    <a class="nav-link">Abdominales</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bailar">Bailar</a>
+                                    <a class="nav-link">Bailar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#caminar">Caminar</a>
+                                    <a class="nav-link">Caminar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#cuerda">Saltar la soga</a>
+                                    <a class="nav-link">Saltar la soga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#canotaje">Canotaje</a>
+                                    <a class="nav-link">Canotaje</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#patinar">Patinar</a>
+                                    <a class="nav-link">Patinar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#sentadillas">Sentadillas</a>
+                                    <a class="nav-link">Sentadillas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#pilates">Pilates</a>
+                                    <a class="nav-link">Pilates</a>
                                 </li>
                             </ul>
                         </div> <!-- cierre de columna lista (enlaces)-->
@@ -394,52 +464,63 @@
                         </div><!-- cierre de columna con tabla -->
                         <!-- columna con párrafo -->
                         <div class="col-sm-4 border fondo-parrafo-final">
-                            <p>Beneficios al correr: </p><ul><li>Lo puede hacer cualquier persona. </li><li>Es práctico. </li><li>Mantiene el cuerpo en forma.</li><li>Disminuye el riesgo de ciertas enfermedades</li><li>Ayuda a mantener la línea</li><li>Se generan endorfinas</li></ul>
+                            <p>Beneficios al correr: </p>
+                            <ul>
+                                <li>Lo puede hacer cualquier persona. </li>
+                                <li>Es práctico. </li>
+                                <li>Mantiene el cuerpo en forma.</li>
+                                <li>Disminuye el riesgo de ciertas enfermedades</li>
+                                <li>Ayuda a mantener la línea</li>
+                                <li>Se generan endorfinas</li>
+                            </ul>
                         </div><!-- cierre de columna con párrafo -->
                     </div><!-- cierre de fila con 2 columnas (tabla/parrafo) -->
                 </div><!-- cierre de tab-pane correr -->
                 <!-- -------------------------------------------------------------------------------------------------------------- -->
                 <!-- inicio contenido NATACIÓN -->
-                <div class="tab-pane fade" id="natacion">
+                <div class="tab-pane" id="opcion4">
                     <div class="row border">
                         <!-- columna con lista (enlaces) -->
                         <div class="col-sm-4 border fondo-lista-cuadro ">
-                            <ul class="nav nav-tabs mt-3 flex-column text-center">
+                            <ul class="nav flex-column text-center">
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#yoga">Yoga</a>
+                                    <a class="nav-link">Yoga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bicicleta">Bicicleta</a>
+                                    <a class="nav-link">Bicicleta</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#correr">Correr</a>
+                                    <a class="nav-link">Correr</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#natacion">Natación</a>
+                                    <a class="nav-link" style="color: #ffffff;
+                                    font-weight: bold;
+                                    background-color: rgb(134 201 255);
+                                    border-color: #dee2e6 #00dcff #fff;">Natación</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#abdominales">Abdominales</a>
+                                    <a class="nav-link">Abdominales</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bailar">Bailar</a>
+                                    <a class="nav-link">Bailar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#caminar">Caminar</a>
+                                    <a class="nav-link">Caminar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#cuerda">Saltar la soga</a>
+                                    <a class="nav-link">Saltar la soga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#canotaje">Canotaje</a>
+                                    <a class="nav-link">Canotaje</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#patinar">Patinar</a>
+                                    <a class="nav-link">Patinar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#sentadillas">Sentadillas</a>
+                                    <a class="nav-link">Sentadillas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#pilates">Pilates</a>
+                                    <a class="nav-link">Pilates</a>
                                 </li>
                             </ul>
                         </div> <!-- cierre de columna lista (enlaces)-->
@@ -490,52 +571,63 @@
                         </div><!-- cierre de columna con tabla -->
                         <!-- columna con párrafo -->
                         <div class="col-sm-4 border fondo-parrafo-final">
-                            <p>Beneficios de la natación: </p><ul><li>Oxigena el cerebro y combate el estrés</li><li>Tonifica y fortalece la espalda</li><li>Corazón fuerte</li><li>Sistema inmunológico resistente</li><li>Corazón fuerte</li><li>Adiós a la celulitis</li></ul>
+                            <p>Beneficios de la natación: </p>
+                            <ul>
+                                <li>Oxigena el cerebro y combate el estrés</li>
+                                <li>Tonifica y fortalece la espalda</li>
+                                <li>Corazón fuerte</li>
+                                <li>Sistema inmunológico resistente</li>
+                                <li>Corazón fuerte</li>
+                                <li>Adiós a la celulitis</li>
+                            </ul>
                         </div><!-- cierre de columna con párrafo -->
                     </div><!-- cierre de fila con 2 columnas (tabla/parrafo) -->
                 </div><!-- cierre de tab-pane Natación -->
                 <!-- -------------------------------------------------------------------------------------------------------------- -->
                 <!-- inicio contenido ABDOMINALES -->
-                <div class="tab-pane fade" id="abdominales">
+                <div class="tab-pane" id="opcion5">
                     <div class="row border">
                         <!-- columna con lista (enlaces) -->
                         <div class="col-sm-4 border fondo-lista-cuadro ">
-                            <ul class="nav nav-tabs mt-3 flex-column text-center">
+                            <ul class="nav flex-column text-center">
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#yoga">Yoga</a>
+                                    <a class="nav-link">Yoga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bicicleta">Bicicleta</a>
+                                    <a class="nav-link">Bicicleta</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#correr">Correr</a>
+                                    <a class="nav-link">Correr</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#natacion">Natación</a>
+                                    <a class="nav-link">Natación</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#abdominales">Abdominales</a>
+                                    <a class="nav-link" style="color: #ffffff;
+                                    font-weight: bold;
+                                    background-color: rgb(134 201 255);
+                                    border-color: #dee2e6 #00dcff #fff;">Abdominales</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bailar">Bailar</a>
+                                    <a class="nav-link">Bailar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#caminar">Caminar</a>
+                                    <a class="nav-link">Caminar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#cuerda">Saltar la soga</a>
+                                    <a class="nav-link">Saltar la soga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#canotaje">Canotaje</a>
+                                    <a class="nav-link">Canotaje</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#patinar">Patinar</a>
+                                    <a class="nav-link">Patinar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#sentadillas">Sentadillas</a>
+                                    <a class="nav-link">Sentadillas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#pilates">Pilates</a>
+                                    <a class="nav-link">Pilates</a>
                                 </li>
                             </ul>
                         </div> <!-- cierre de columna lista (enlaces)-->
@@ -585,52 +677,61 @@
                         </div><!-- cierre de columna con tabla -->
                         <!-- columna con párrafo -->
                         <div class="col-sm-4 border fondo-parrafo-final">
-                            <p>Beneficios de hacer abdominales: </p><ul><li>Respira mejor gracias a los abdominales</li><li>Protegen nuestros órganos</li><li>Los abdominales, claves para el equilibrio</li><li>Acaba con los dolores de espalda</li></ul>
+                            <p>Beneficios de hacer abdominales: </p>
+                            <ul>
+                                <li>Respira mejor gracias a los abdominales</li>
+                                <li>Protegen nuestros órganos</li>
+                                <li>Los abdominales, claves para el equilibrio</li>
+                                <li>Acaba con los dolores de espalda</li>
+                            </ul>
                         </div><!-- cierre de columna con párrafo -->
                     </div><!-- cierre de fila con 2 columnas (tabla/parrafo) -->
                 </div><!-- cierre de tab-pane abdominales -->
                 <!-- -------------------------------------------------------------------------------------------------------------- -->
                 <!-- inicio contenido BAILAR -->
-                <div class="tab-pane fade" id="bailar">
+                <div class="tab-pane" id="opcion6">
                     <div class="row border">
                         <!-- columna con lista (enlaces) -->
                         <div class="col-sm-4 border fondo-lista-cuadro ">
-                            <ul class="nav nav-tabs mt-3 flex-column text-center">
+                            <ul class="nav flex-column text-center">
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#yoga">Yoga</a>
+                                    <a class="nav-link">Yoga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bicicleta">Bicicleta</a>
+                                    <a class="nav-link">Bicicleta</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#correr">Correr</a>
+                                    <a class="nav-link">Correr</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#natacion">Natación</a>
+                                    <a class="nav-link">Natación</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#abdominales">Abdominales</a>
+                                    <a class="nav-link">Abdominales</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bailar">Bailar</a>
+                                    <a class="nav-link" style="color: #ffffff;
+                                    font-weight: bold;
+                                    background-color: rgb(134 201 255);
+                                    border-color: #dee2e6 #00dcff #fff;">Bailar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#caminar">Caminar</a>
+                                    <a class="nav-link">Caminar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#cuerda">Saltar la soga</a>
+                                    <a class="nav-link">Saltar la soga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#canotaje">Canotaje</a>
+                                    <a class="nav-link">Canotaje</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#patinar">Patinar</a>
+                                    <a class="nav-link">Patinar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#sentadillas">Sentadillas</a>
+                                    <a class="nav-link">Sentadillas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#pilates">Pilates</a>
+                                    <a class="nav-link">Pilates</a>
                                 </li>
                             </ul>
                         </div> <!-- cierre de columna lista (enlaces)-->
@@ -678,52 +779,66 @@
                         </div><!-- cierre de columna con tabla -->
                         <!-- columna con párrafo -->
                         <div class="col-sm-4 border fondo-parrafo-final">
-                            <p>Beneficios al bailar: </p><ul><li>Mejor salud</li><li> Músculos más fuertes</li><li>Mejor equilibrio y coordinación</li><li>Huesos más fuertes</li><li>Menor riesgo de demencia</li><li>Mejor memoria</li><li>Menos estrés</li><li>Más energía</li><li>Mejor estado de ánimo</li></ul>
+                            <p>Beneficios al bailar: </p>
+                            <ul>
+                                <li>Mejor salud</li>
+                                <li> Músculos más fuertes</li>
+                                <li>Mejor equilibrio y coordinación</li>
+                                <li>Huesos más fuertes</li>
+                                <li>Menor riesgo de demencia</li>
+                                <li>Mejor memoria</li>
+                                <li>Menos estrés</li>
+                                <li>Más energía</li>
+                                <li>Mejor estado de ánimo</li>
+                            </ul>
                         </div><!-- cierre de columna con párrafo -->
                     </div><!-- cierre de fila con 2 columnas (tabla/parrafo) -->
                 </div><!-- cierre de tab-pane bailar -->
                 <!-- -------------------------------------------------------------------------------------------------------------- -->
                 <!-- inicio contenido CAMINAR -->
-                <div class="tab-pane fade" id="caminar">
+                <div class="tab-pane" id="opcion7">
                     <div class="row border">
                         <!-- columna con lista (enlaces) -->
                         <div class="col-sm-4 border fondo-lista-cuadro ">
-                            <ul class="nav nav-tabs mt-3 flex-column text-center">
+                            <ul class="nav flex-column text-center">
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#yoga">Yoga</a>
+                                    <a class="nav-link">Yoga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bicicleta">Bicicleta</a>
+                                    <a class="nav-link">Bicicleta</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#correr">Correr</a>
+                                    <a class="nav-link">Correr</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#natacion">Natación</a>
+                                    <a class="nav-link">Natación</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#abdominales">Abdominales</a>
+                                    <a class="nav-link">Abdominales</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bailar">Bailar</a>
+                                    <a class="nav-link">Bailar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#caminar">Caminar</a>
+                                    <a class="nav-link" style="color: #ffffff;
+                                    font-weight: bold;
+                                    background-color: rgb(134 201 255);
+                                    border-color: #dee2e6 #00dcff #fff;">Caminar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#cuerda">Saltar la cuerda</a>
+                                    <a class="nav-link">Saltar la soga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#canotaje">Canotaje</a>
+                                    <a class="nav-link">Canotaje</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#patinar">Patinar</a>
+                                    <a class="nav-link">Patinar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#sentadillas">Sentadillas</a>
+                                    <a class="nav-link">Sentadillas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#pilates">Pilates</a>
+                                    <a class="nav-link">Pilates</a>
                                 </li>
                             </ul>
                         </div> <!-- cierre de columna lista (enlaces)-->
@@ -772,52 +887,63 @@
                         </div><!-- cierre de columna con tabla -->
                         <!-- columna con párrafo -->
                         <div class="col-sm-4 border fondo-parrafo-final">
-                            <p>Beneficios al caminar: </p><ul><li>Disminuye el riesgo de ser hipertenso.</li><li>Produce efectos favorables sobre el colesterol.</li><li>Puede ayudar a prevenir la aparición de diabetes.</li><li>Puede mejorar tu vida sexual.</li><li>Aumenta los niveles de Vitamina D.</li><li>Ayuda a perder peso.</li></ul>
+                            <p>Beneficios al caminar: </p>
+                            <ul>
+                                <li>Disminuye el riesgo de ser hipertenso.</li>
+                                <li>Produce efectos favorables sobre el colesterol.</li>
+                                <li>Puede ayudar a prevenir la aparición de diabetes.</li>
+                                <li>Puede mejorar tu vida sexual.</li>
+                                <li>Aumenta los niveles de Vitamina D.</li>
+                                <li>Ayuda a perder peso.</li>
+                            </ul>
                         </div><!-- cierre de columna con párrafo -->
                     </div><!-- cierre de fila con 2 columnas (tabla/parrafo) -->
                 </div><!-- cierre de tab-pane caminar -->
                 <!-- -------------------------------------------------------------------------------------------------------------- -->
                 <!-- inicio contenido SALTAR-CUERDA -->
-                <div class="tab-pane fade" id="cuerda">
+                <div class="tab-pane" id="opcion8">
                     <div class="row border">
                         <!-- columna con lista (enlaces) -->
                         <div class="col-sm-4 border fondo-lista-cuadro ">
-                            <ul class="nav nav-tabs mt-3 flex-column text-center">
+                            <ul class="nav flex-column text-center">
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#yoga">Yoga</a>
+                                    <a class="nav-link">Yoga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bicicleta">Bicicleta</a>
+                                    <a class="nav-link">Bicicleta</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#correr">Correr</a>
+                                    <a class="nav-link">Correr</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#natacion">Natación</a>
+                                    <a class="nav-link">Natación</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#abdominales">Abdominales</a>
+                                    <a class="nav-link">Abdominales</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bailar">Bailar</a>
+                                    <a class="nav-link">Bailar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#caminar">Caminar</a>
+                                    <a class="nav-link">Caminar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#cuerda">Saltar la soga</a>
+                                    <a class="nav-link" style="color: #ffffff;
+                                    font-weight: bold;
+                                    background-color: rgb(134 201 255);
+                                    border-color: #dee2e6 #00dcff #fff;">Saltar la soga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#canotaje">Canotaje</a>
+                                    <a class="nav-link">Canotaje</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#patinar">Patinar</a>
+                                    <a class="nav-link">Patinar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#sentadillas">Sentadillas</a>
+                                    <a class="nav-link">Sentadillas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#pilates">Pilates</a>
+                                    <a class="nav-link">Pilates</a>
                                 </li>
                             </ul>
                         </div> <!-- cierre de columna lista (enlaces)-->
@@ -865,52 +991,63 @@
                         </div><!-- cierre de columna con tabla -->
                         <!-- columna con párrafo -->
                         <div class="col-sm-4 border fondo-parrafo-final">
-                            <p>Beneficios al saltar la cuerda: </p><ul><li>Quema calorías</li><li>Mejora la resistencia</li><li>Fortalece el corazón.</li><li>Involucra a gran cantidad de músculos.</li><li>Es para todo el mundo.</li><li>Es divertido.</li></ul>
+                            <p>Beneficios al saltar la cuerda: </p>
+                            <ul>
+                                <li>Quema calorías</li>
+                                <li>Mejora la resistencia</li>
+                                <li>Fortalece el corazón.</li>
+                                <li>Involucra a gran cantidad de músculos.</li>
+                                <li>Es para todo el mundo.</li>
+                                <li>Es divertido.</li>
+                            </ul>
                         </div><!-- cierre de columna con párrafo -->
                     </div><!-- cierre de fila con 2 columnas (tabla/parrafo) -->
                 </div><!-- cierre de tab-pane saltar-cuerda -->
                 <!-- -------------------------------------------------------------------------------------------------------------- -->
                 <!-- inicio contenido CANOTAJE -->
-                <div class="tab-pane fade" id="canotaje">
+                <div class="tab-pane" id="opcion9">
                     <div class="row border">
                         <!-- columna con lista (enlaces) -->
                         <div class="col-sm-4 border fondo-lista-cuadro ">
-                            <ul class="nav nav-tabs mt-3 flex-column text-center">
+                            <ul class="nav flex-column text-center">
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#yoga">Yoga</a>
+                                    <a class="nav-link">Yoga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bicicleta">Bicicleta</a>
+                                    <a class="nav-link">Bicicleta</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#correr">Correr</a>
+                                    <a class="nav-link">Correr</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#natacion">Natación</a>
+                                    <a class="nav-link">Natación</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#abdominales">Abdominales</a>
+                                    <a class="nav-link">Abdominales</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bailar">Bailar</a>
+                                    <a class="nav-link">Bailar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#caminar">Caminar</a>
+                                    <a class="nav-link">Caminar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#cuerda">Saltar la soga</a>
+                                    <a class="nav-link">Saltar la soga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#canotaje">Canotaje</a>
+                                    <a class="nav-link" style="color: #ffffff;
+                                    font-weight: bold;
+                                    background-color: rgb(134 201 255);
+                                    border-color: #dee2e6 #00dcff #fff;">Canotaje</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#patinar">Patinar</a>
+                                    <a class="nav-link">Patinar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#sentadillas">Sentadillas</a>
+                                    <a class="nav-link">Sentadillas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#pilates">Pilates</a>
+                                    <a class="nav-link">Pilates</a>
                                 </li>
                             </ul>
                         </div> <!-- cierre de columna lista (enlaces)-->
@@ -959,52 +1096,64 @@
                         </div><!-- cierre de columna con tabla -->
                         <!-- columna con párrafo -->
                         <div class="col-sm-4 border fondo-parrafo-final">
-                            <p>Beneficios de hacer canotaje: </p><ul><li>Aumentar la flexibilidad</li><li>Elimina el estrés o las tensiones.</li><li>Fortalecer los músculos de los brazos, la espalda y el tronco.</li><li>Incrementar la coordinación motriz fina (necesaria para realizar actividades que requieren precisión) y gruesa (movimientos que involucran varios grupos musculares).</li><li>Te divierte</li></ul>
+                            <p>Beneficios de hacer canotaje: </p>
+                            <ul>
+                                <li>Aumentar la flexibilidad</li>
+                                <li>Elimina el estrés o las tensiones.</li>
+                                <li>Fortalecer los músculos de los brazos, la espalda y el tronco.</li>
+                                <li>Incrementar la coordinación motriz fina (necesaria para realizar actividades que
+                                    requieren precisión) y gruesa (movimientos que involucran varios grupos musculares).
+                                </li>
+                                <li>Te divierte</li>
+                            </ul>
                         </div><!-- cierre de columna con párrafo -->
                     </div><!-- cierre de fila con 2 columnas (tabla/parrafo) -->
                 </div><!-- cierre de tab-pane canotaje -->
                 <!-- -------------------------------------------------------------------------------------------------------------- -->
                 <!-- inicio contenido PATINAR -->
-                <div class="tab-pane fade" id="patinar">
+                <div class="tab-pane" id="opcion10">
                     <div class="row border">
                         <!-- columna con lista (enlaces) -->
                         <div class="col-sm-4 border fondo-lista-cuadro ">
-                            <ul class="nav nav-tabs mt-3 flex-column text-center">
+                            <ul class="nav flex-column text-center">
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#yoga">Yoga</a>
+                                    <a class="nav-link">Yoga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bicicleta">Bicicleta</a>
+                                    <a class="nav-link">Bicicleta</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#correr">Correr</a>
+                                    <a class="nav-link">Correr</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#natacion">Natación</a>
+                                    <a class="nav-link">Natación</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#abdominales">Abdominales</a>
+                                    <a class="nav-link">Abdominales</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bailar">Bailar</a>
+                                    <a class="nav-link">Bailar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#caminar">Caminar</a>
+                                    <a class="nav-link">Caminar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#cuerda">Saltar la soga</a>
+                                    <a class="nav-link">Saltar la soga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#canotaje">Canotaje</a>
+                                    <a class="nav-link">Canotaje</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#patinar">Patinar</a>
+                                    <a class="nav-link" style="color: #ffffff;
+                                    font-weight: bold;
+                                    background-color: rgb(134 201 255);
+                                    border-color: #dee2e6 #00dcff #fff;">Patinar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#sentadillas">Sentadillas</a>
+                                    <a class="nav-link">Sentadillas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#pilates">Pilates</a>
+                                    <a class="nav-link">Pilates</a>
                                 </li>
                             </ul>
                         </div> <!-- cierre de columna lista (enlaces)-->
@@ -1055,52 +1204,63 @@
                         </div><!-- cierre de columna con tabla -->
                         <!-- columna con párrafo -->
                         <div class="col-sm-4 border fondo-parrafo-final">
-                            <p>Beneficios al patinar: </p><ul><li>Mejora el tono muscular de las piernas </li><li>Quema gran cantidad de calorías </li><li>Mejora el equilibrio </li><li> Fortalece el corazón y los pulmones</li><li>Tiene un menor impacto en las articulaciones que correr</li><li>Mejora la coordinación motriz</li></ul>
+                            <p>Beneficios al patinar: </p>
+                            <ul>
+                                <li>Mejora el tono muscular de las piernas </li>
+                                <li>Quema gran cantidad de calorías </li>
+                                <li>Mejora el equilibrio </li>
+                                <li> Fortalece el corazón y los pulmones</li>
+                                <li>Tiene un menor impacto en las articulaciones que correr</li>
+                                <li>Mejora la coordinación motriz</li>
+                            </ul>
                         </div><!-- cierre de columna con párrafo -->
                     </div><!-- cierre de fila con 2 columnas (tabla/parrafo) -->
                 </div><!-- cierre de tab-pane patinar -->
                 <!-- -------------------------------------------------------------------------------------------------------------- -->
                 <!-- inicio contenido SENTADILLAS -->
-                <div class="tab-pane fade" id="sentadillas">
+                <div class="tab-pane" id="opcion11">
                     <div class="row border">
                         <!-- columna con lista (enlaces) -->
                         <div class="col-sm-4 border fondo-lista-cuadro ">
-                            <ul class="nav nav-tabs mt-3 flex-column text-center">
+                            <ul class="nav flex-column text-center">
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#yoga">Yoga</a>
+                                    <a class="nav-link">Yoga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bicicleta">Bicicleta</a>
+                                    <a class="nav-link">Bicicleta</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#correr">Correr</a>
+                                    <a class="nav-link">Correr</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#natacion">Natación</a>
+                                    <a class="nav-link">Natación</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#abdominales">Abdominales</a>
+                                    <a class="nav-link">Abdominales</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bailar">Bailar</a>
+                                    <a class="nav-link">Bailar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#caminar">Caminar</a>
+                                    <a class="nav-link">Caminar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#cuerda">Saltar la soga</a>
+                                    <a class="nav-link">Saltar la soga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#canotaje">Canotaje</a>
+                                    <a class="nav-link">Canotaje</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#patinar">Patinar</a>
+                                    <a class="nav-link">Patinar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#sentadillas">Sentadillas</a>
+                                    <a class="nav-link" style="color: #ffffff;
+                                    font-weight: bold;
+                                    background-color: rgb(134 201 255);
+                                    border-color: #dee2e6 #00dcff #fff;">Sentadillas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#pilates">Pilates</a>
+                                    <a class="nav-link">Pilates</a>
                                 </li>
                             </ul>
                         </div> <!-- cierre de columna lista (enlaces)-->
@@ -1150,52 +1310,62 @@
                         </div><!-- cierre de columna con tabla -->
                         <!-- columna con párrafo -->
                         <div class="col-sm-4 border fondo-parrafo-final">
-                            <p>Beneficios de las sentadillas: </p><ul><li>Aumenta la fuerza</li><li>Piernas y glúteos más definidos</li><li>Mejora la movilidad</li><li>Estabiliza tu cuerpo</li><li>Útil para tu espalda</li></ul>
+                            <p>Beneficios de las sentadillas: </p>
+                            <ul>
+                                <li>Aumenta la fuerza</li>
+                                <li>Piernas y glúteos más definidos</li>
+                                <li>Mejora la movilidad</li>
+                                <li>Estabiliza tu cuerpo</li>
+                                <li>Útil para tu espalda</li>
+                            </ul>
                         </div><!-- cierre de columna con párrafo -->
                     </div><!-- cierre de fila con 2 columnas (tabla/parrafo) -->
                 </div><!-- cierre de tab-pane sentadillas -->
                 <!-- -------------------------------------------------------------------------------------------------------------- -->
                 <!-- inicio contenido PILATES -->
-                <div class="tab-pane fade" id="pilates">
+                <div class="tab-pane" id="opcion12">
                     <div class="row border">
                         <!-- columna con lista (enlaces) -->
                         <div class="col-sm-4 border fondo-lista-cuadro ">
-                            <ul class="nav nav-tabs mt-3 flex-column text-center">
+                            <ul class="nav flex-column text-center">
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#yoga">Yoga</a>
+                                    <a class="nav-link">Yoga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bicicleta">Bicicleta</a>
+                                    <a class="nav-link">Bicicleta</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#correr">Correr</a>
+                                    <a class="nav-link">Correr</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#natacion">Natación</a>
+                                    <a class="nav-link">Natación</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#abdominales">Abdominales</a>
+                                    <a class="nav-link">Abdominales</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#bailar">Bailar</a>
+                                    <a class="nav-link">Bailar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#caminar">Caminar</a>
+                                    <a class="nav-link">Caminar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#cuerda">Saltar la soga</a>
+                                    <a class="nav-link">Saltar la soga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#canotaje">Canotaje</a>
+                                    <a class="nav-link">Canotaje</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#patinar">Patinar</a>
+                                    <a class="nav-link">Patinar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#sentadillas">Sentadillas</a>
+                                    <a class="nav-link">Sentadillas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#pilates">Pilates</a>
+                                    <a class="nav-link" style="color: #ffffff;
+                                    font-weight: bold;
+                                    background-color: rgb(134 201 255);
+                                    border-color: #dee2e6 #00dcff #fff;">Pilates</a>
                                 </li>
                             </ul>
                         </div> <!-- cierre de columna lista (enlaces)-->
@@ -1245,7 +1415,16 @@
                         </div><!-- cierre de columna con tabla -->
                         <!-- columna con párrafo -->
                         <div class="col-sm-4 border fondo-parrafo-final">
-                            <p>Beneficios al hacer pilates: </p><ul><li>Aumenta la flexibilidad, la agilidad y la coordinación de los movimientos.</li><li>Corrige hábitos posturales perjudiciales y reduce los dolores de espalda.</li><li>Aporta vitalidad y fuerza.</li><li>Es útil para conocer mejor el propio cuerpo.</li><li>Previene de lesiones musculares y ayuda en procesos de rehabilitación.</li><li>Combate el estrés y la ansiedad a través del control de la respiración y de la concentración.</li></ul>
+                            <p>Beneficios al hacer pilates: </p>
+                            <ul>
+                                <li>Aumenta la flexibilidad, la agilidad y la coordinación de los movimientos.</li>
+                                <li>Corrige hábitos posturales perjudiciales y reduce los dolores de espalda.</li>
+                                <li>Aporta vitalidad y fuerza.</li>
+                                <li>Es útil para conocer mejor el propio cuerpo.</li>
+                                <li>Previene de lesiones musculares y ayuda en procesos de rehabilitación.</li>
+                                <li>Combate el estrés y la ansiedad a través del control de la respiración y de la
+                                    concentración.</li>
+                            </ul>
                         </div><!-- cierre de columna con párrafo -->
                     </div><!-- cierre de fila con 2 columnas (tabla/parrafo) -->
                 </div><!-- cierre de tab-pane pilates -->
@@ -1305,7 +1484,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
         </script>
-
     <script src="bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
 </body>
 
