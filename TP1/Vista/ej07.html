@@ -19,18 +19,6 @@
 
     <title>Ejercicio 07 - Tp01</title>
 
-    <style>
-        /* estilos para lista desordenada del ej7 (tabs dinamicos) */
-        main ul {
-            background-color: #ffffffde;
-        }
-
-        main li {
-            padding: 8px;
-        }
-
-    </style>
-
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -85,105 +73,123 @@
             </div>
         </nav>
         <!-- Navbar -->
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center primer-titulo-pagina">
-                    <h1>Ejercicio 7: Usando Tabs</h1>
-                </div>
-            </div>
-        </div>
     </header>
 
-    <main>
-        <!-- mensaje bienvenida -->
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-8 text-center msj-bienv"
-                    style="background-color:rgba(255, 255, 255, 0.24); margin: 50px 0;">
+    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <div class="carousel-caption">
+                    <h1 class="display">Beneficios de la actividad física</h1>
                     <p>Hacer actividad física regularmente es una de las cosas más importantes que puedes hacer por tu
                         salud.</p>
                     <p>Todos pueden beneficiarse de la actividad física — no importa su edad, habilidades, etnicidad o
-                        la forma y tamaño de su cuerpo.</p>
+                        la forma y
+                        tamaño de su cuerpo.</p>
                 </div>
+                <img src="style/img/carousel/run-carousel.jpg" class="d-block w-100" alt="Correr">
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-caption">
+                    <h1 class="display">Beneficios de la actividad física</h1>
+                    <p>Hacer actividad física regularmente es una de las cosas más importantes que puedes hacer por tu
+                        salud.</p>
+                    <p>Todos pueden beneficiarse de la actividad física — no importa su edad, habilidades, etnicidad o
+                        la forma y
+                        tamaño de su cuerpo.</p>
+                </div>
+                <img src="style/img/carousel/abs-carousel.jpg" class="d-block w-100" alt="Abdominales">
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-caption">
+                    <h1 class="display">Beneficios de la actividad física</h1>
+                    <p>Hacer actividad física regularmente es una de las cosas más importantes que puedes hacer por tu
+                        salud.</p>
+                    <p>Todos pueden beneficiarse de la actividad física — no importa su edad, habilidades, etnicidad o
+                        la forma y
+                        tamaño de su cuerpo.</p>
+                </div>
+                <img src="style/img/carousel/bike-carousel.jpg" class="d-block w-100" alt="Bicileta">
             </div>
 
-            <!-- tabs dinámincas -->
-            <section class="contenido-central">
-                <div class="container">
-                    <h3 class="text-center">Qué hacer antes y después del ejercicio</h3>
-                    <div class="row justify-content-center">
-                        <div class="col-sm-8 ">
-                            <ul class="nav nav-tabs mt-3">
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#opcion1">Antes de empezar </a>
+        </div>
+    </div>
+
+    <!-- tabs dinámincas -->
+    <section class="contenido-central">
+        <div class="container">
+            <h3 class="text-center mt-5">Qué hacer antes y después del ejercicio</h3>
+            <div class="row justify-content-center">
+                <div class="col-sm-8 ">
+                    <ul class="nav nav-tabs mt-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#opcion1">Antes de empezar </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#opcion2">Al terminar</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="opcion1">
+                            <ul>
+                                <li>
+                                    Adapta tu alimentación al tipo de esfuerzo que realizas. Haz comidas ligeras
+                                    y
+                                    frecuentes.
+                                    <ul>
+                                        <li>Come algo rico en hidratos de carbono (fruta, cereales o un pequeño
+                                            bocadillo) alrededor
+                                            de dos horas antes empezar a realizar la actividad.</li>
+                                        <li>No hagas actividad física inmediatamente al terminar de comer.</li>
+                                    </ul>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#opcion2">Al terminar</a>
+                                <li>
+                                    Si las actividades son al aire libre ten en cuenta las condiciones
+                                    climatológicas y
+                                    adecúa tu ropa, la comida y el agua necesarios.
+                                    <ul>
+                                        <li>Viste ropa y calzado cómodos y adecuados.</li>
+                                        <li>Toma medidas de protección ante los factores ambientales como el
+                                            calor,
+                                            el frío, el
+                                            agua, el sol, la altura, el terreno. Ten especial precaución al
+                                            hacer
+                                            actividades
+                                            intensas en ambientes muy calurosos.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Haz ejercicios de calentamiento (5-10 minutos) y estiramiento. Así reduces
+                                    el
+                                    riesgo de
+                                    lesiones y minimizas la posibilidad de complicaciones cardiovasculares.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane fade" id="opcion2">
+                            <ul>
+                                <li>
+                                    Es importante que termines de hacer ejercicio de manera progresiva, siempre
+                                    pasando de
+                                    una mayor a una menor intensidad.
+                                <li>
+                                    No olvides realizar estiramientos.
+                                </li>
+                                <li>
+                                    Sécate el sudor y cámbiate de ropa para evitar enfriarte.
+                                </li>
+                                <li>
+                                    Bebe agua y come algo sólido que contenga hidratos de carbono y proteínas.
                                 </li>
                             </ul>
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="opcion1">
-                                    <ul>
-                                        <li>
-                                            Adapta tu alimentación al tipo de esfuerzo que realizas. Haz comidas ligeras
-                                            y
-                                            frecuentes.
-                                            <ul>
-                                                <li>Come algo rico en hidratos de carbono (fruta, cereales o un pequeño
-                                                    bocadillo) alrededor
-                                                    de dos horas antes empezar a realizar la actividad.</li>
-                                                <li>No hagas actividad física inmediatamente al terminar de comer.</li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            Si las actividades son al aire libre ten en cuenta las condiciones
-                                            climatológicas y
-                                            adecúa tu ropa, la comida y el agua necesarios.
-                                            <ul>
-                                                <li>Viste ropa y calzado cómodos y adecuados.</li>
-                                                <li>Toma medidas de protección ante los factores ambientales como el
-                                                    calor,
-                                                    el frío, el
-                                                    agua, el sol, la altura, el terreno. Ten especial precaución al
-                                                    hacer
-                                                    actividades
-                                                    intensas en ambientes muy calurosos.
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>Haz ejercicios de calentamiento (5-10 minutos) y estiramiento. Así reduces
-                                            el
-                                            riesgo de
-                                            lesiones y minimizas la posibilidad de complicaciones cardiovasculares.</li>
-                                    </ul>
-                                </div>
-                                <div class="tab-pane fade" id="opcion2">
-                                    <ul>
-                                        <li>
-                                            Es importante que termines de hacer ejercicio de manera progresiva, siempre
-                                            pasando de
-                                            una mayor a una menor intensidad.
-                                        <li>
-                                            No olvides realizar estiramientos.
-                                        </li>
-                                        <li>
-                                            Sécate el sudor y cámbiate de ropa para evitar enfriarte.
-                                        </li>
-                                        <li>
-                                            Bebe agua y come algo sólido que contenga hidratos de carbono y proteínas.
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
+    </section>
 
-    </main>
 
-    <!-- footer -->
+
     <footer class="bg-dark text-center text-white mt-auto">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
@@ -224,7 +230,6 @@
         </div>
         <!-- Copyright -->
     </footer>
-
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
         </script>
@@ -235,8 +240,6 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
         </script>
     <script src="bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
-
 </body>
-
 
 </html>

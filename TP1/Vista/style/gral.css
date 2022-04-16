@@ -2,12 +2,12 @@ body {
   background-color: rgb(177, 211, 238);
 }
 
-main {
+/* main {
   background-image: url(https://images.pexels.com/photos/2803158/pexels-photo-2803158.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
+} */
 
 .msj-bienv {
   font-size: 30px;
@@ -93,4 +93,48 @@ h3 {
 
 .fondo-parrafo-final {
   background-color: rgb(209, 234, 255);
+}
+
+/* estilos para el carrusel de imagenes */
+.carousel-item {
+  height: 100vh;
+}
+
+/* change transition duration to control the speed of fade effect */
+.carousel-item {
+  transition: transform 2.6s ease-in-out;
+}
+
+.carousel-item img {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-position: center;
+  object-fit: cover;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  transition: opacity 0s 2.6s;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  top: 125px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: fit-content;
+  padding: 25px 5px;
+}
+
+.carousel-caption p {
+  font-size: 1.2em;
+  margin-top: 30px;
+  font-weight: 100;
 }
