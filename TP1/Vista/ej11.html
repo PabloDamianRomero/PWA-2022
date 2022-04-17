@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Inconos de bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
     <!-- Estilos propios -->
     <link rel="stylesheet" href="style/gral.css">
@@ -166,10 +168,7 @@
                         <!-- columna con lista (enlaces) -->
                         <div class="col-sm-4 border fondo-lista-cuadro">
                             <ul class="nav flex-column text-center">
-                                <li class="nav-item" style="color: #ffffff;
-                                font-weight: bold;
-                                background-color: rgb(134 201 255);
-                                border-color: #dee2e6 #00dcff #fff;">
+                                <li class="nav-item activ" >
                                     Yoga
                                 </li>
                                 <li class="nav-item d-none d-lg-block d-md-block d-sm-block">
@@ -229,25 +228,20 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Autores</th>
-                                        <th scope="col">Legajo</th>
-                                        <th scope="col">Grupo</th>
+                                        <th scope="col">Diciplina</th>
+                                        <th scope="col">Edad recomendada</th>
+                                        <th scope="col">Dificultad</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Rubilar Francisco</td>
-                                        <td>Fai-2426</td>
-                                        <td>Amarillo</td>
+                                        <td>Yoga</td>
+                                        <td> 4 a&ntilde;os en delante</td>
+                                        <td><strong class="text-primary" >FACIL</strong></td>
 
                                     </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Romero Pablo</td>
-                                        <td>Fai-1652</td>
-                                        <td>Amarillo</td>
-                                    </tr>
+                                  
                                 </tbody>
                             </table>
                         </div><!-- cierre de columna con tabla -->
@@ -278,10 +272,7 @@
                                     <a class="nav-link">Yoga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: #ffffff;
-                                    font-weight: bold;
-                                    background-color: rgb(134 201 255);
-                                    border-color: #dee2e6 #00dcff #fff;">Bicicleta</a>
+                                    <a class="nav-link activ">Bicicleta</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link">Correr</a>
@@ -336,25 +327,20 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Autores</th>
-                                        <th scope="col">Legajo</th>
-                                        <th scope="col">Grupo</th>
+                                        <th scope="col">Diciplina</th>
+                                        <th scope="col">Edad recomendada</th>
+                                        <th scope="col">Dificultad</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Rubilar Francisco</td>
-                                        <td>Fai-2426</td>
-                                        <td>Amarillo</td>
+                                        <td>Bicicleta</td>
+                                        <td> 6 a&ntilde;os en delante</td>
+                                        <td><strong class="text-primary" >FACIL - MEDIO</strong></td>
 
                                     </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Romero Pablo</td>
-                                        <td>Fai-1652</td>
-                                        <td>Amarillo</td>
-                                    </tr>
+                                  
                                 </tbody>
                             </table>
                         </div><!-- cierre de columna con tabla -->
@@ -386,10 +372,7 @@
                                     <a class="nav-link">Bicicleta</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: #ffffff;
-                                    font-weight: bold;
-                                    background-color: rgb(134 201 255);
-                                    border-color: #dee2e6 #00dcff #fff;">Correr</a>
+                                    <a class="nav-link activ " >Correr</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link">Natación</a>
@@ -436,31 +419,30 @@
                     <div class="row border">
                         <!-- columna con tabla -->
                         <div class="col-sm-8 border fondo-tabla">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Autores</th>
-                                        <th scope="col">Legajo</th>
-                                        <th scope="col">Grupo</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Rubilar Francisco</td>
-                                        <td>Fai-2426</td>
-                                        <td>Amarillo</td>
+                            <div class="callout-info">
 
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Romero Pablo</td>
-                                        <td>Fai-1652</td>
-                                        <td>Amarillo</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Diciplina</th>
+                                            <th scope="col">Edad recomendada</th>
+                                            <th scope="col">Dificultad</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Correr</td>
+                                            <td> 8 a&ntilde;os en delante</td>
+                                            <td><strong class="text-primary" >FACIL</strong></td>
+    
+                                        </tr>
+                                      
+                                    </tbody>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div><!-- cierre de columna con tabla -->
                         <!-- columna con párrafo -->
                         <div class="col-sm-4 border fondo-parrafo-final">
@@ -493,10 +475,7 @@
                                     <a class="nav-link">Correr</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: #ffffff;
-                                    font-weight: bold;
-                                    background-color: rgb(134 201 255);
-                                    border-color: #dee2e6 #00dcff #fff;">Natación</a>
+                                    <a class="nav-link activ" >Natación</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link">Abdominales</a>
@@ -547,25 +526,21 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Autores</th>
-                                        <th scope="col">Legajo</th>
-                                        <th scope="col">Grupo</th>
+                                        <th scope="col">Diciplina</th>
+                                        <th scope="col">Edad recomendada</th>
+                                        <th scope="col">Dificultad</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Rubilar Francisco</td>
-                                        <td>Fai-2426</td>
-                                        <td>Amarillo</td>
+                                        <td>Natacion</td>
+                                        <td> 7 a&ntilde;os en delante</td>
+                                        <td><strong class="text-primary" >FACIL - MEDIO</strong></td>
 
                                     </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Romero Pablo</td>
-                                        <td>Fai-1652</td>
-                                        <td>Amarillo</td>
-                                    </tr>
+                                  
+                                </tbody>
                                 </tbody>
                             </table>
                         </div><!-- cierre de columna con tabla -->
@@ -603,10 +578,7 @@
                                     <a class="nav-link">Natación</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: #ffffff;
-                                    font-weight: bold;
-                                    background-color: rgb(134 201 255);
-                                    border-color: #dee2e6 #00dcff #fff;">Abdominales</a>
+                                    <a class="nav-link activ" >Abdominales</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link">Bailar</a>
@@ -653,25 +625,21 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Autores</th>
-                                        <th scope="col">Legajo</th>
-                                        <th scope="col">Grupo</th>
+                                        <th scope="col">Diciplina</th>
+                                        <th scope="col">Edad recomendada</th>
+                                        <th scope="col">Dificultad</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Rubilar Francisco</td>
-                                        <td>Fai-2426</td>
-                                        <td>Amarillo</td>
+                                        <td>Abdominales</td>
+                                        <td> 12 a&ntilde;os en delante</td>
+                                        <td><strong class="text-primary" >MEDIO</strong></td>
 
                                     </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Romero Pablo</td>
-                                        <td>Fai-1652</td>
-                                        <td>Amarillo</td>
-                                    </tr>
+                                  
+                                </tbody>
                                 </tbody>
                             </table>
                         </div><!-- cierre de columna con tabla -->
@@ -710,10 +678,7 @@
                                     <a class="nav-link">Abdominales</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: #ffffff;
-                                    font-weight: bold;
-                                    background-color: rgb(134 201 255);
-                                    border-color: #dee2e6 #00dcff #fff;">Bailar</a>
+                                    <a class="nav-link activ" >Bailar</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link">Caminar</a>
@@ -755,25 +720,21 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Autores</th>
-                                        <th scope="col">Legajo</th>
-                                        <th scope="col">Grupo</th>
+                                        <th scope="col">Diciplina</th>
+                                        <th scope="col">Edad recomendada</th>
+                                        <th scope="col">Dificultad</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Rubilar Francisco</td>
-                                        <td>Fai-2426</td>
-                                        <td>Amarillo</td>
+                                        <td>Baile</td>
+                                        <td> 8 a&ntilde;os en delante</td>
+                                        <td><strong class="text-primary" >FACIL</strong></td>
 
                                     </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Romero Pablo</td>
-                                        <td>Fai-1652</td>
-                                        <td>Amarillo</td>
-                                    </tr>
+                                  
+                                </tbody>
                                 </tbody>
                             </table>
                         </div><!-- cierre de columna con tabla -->
@@ -820,10 +781,7 @@
                                     <a class="nav-link">Bailar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: #ffffff;
-                                    font-weight: bold;
-                                    background-color: rgb(134 201 255);
-                                    border-color: #dee2e6 #00dcff #fff;">Caminar</a>
+                                    <a class="nav-link activ" >Caminar</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link">Saltar la soga</a>
@@ -863,25 +821,21 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Autores</th>
-                                        <th scope="col">Legajo</th>
-                                        <th scope="col">Grupo</th>
+                                        <th scope="col">Diciplina</th>
+                                        <th scope="col">Edad recomendada</th>
+                                        <th scope="col">Dificultad</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Rubilar Francisco</td>
-                                        <td>Fai-2426</td>
-                                        <td>Amarillo</td>
+                                        <td>Caminar</td>
+                                        <td> 9 a&ntilde;os en delante</td>
+                                        <td><strong class="text-primary" >FACIL</strong></td>
 
                                     </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Romero Pablo</td>
-                                        <td>Fai-1652</td>
-                                        <td>Amarillo</td>
-                                    </tr>
+                                  
+                                </tbody>
                                 </tbody>
                             </table>
                         </div><!-- cierre de columna con tabla -->
@@ -928,10 +882,7 @@
                                     <a class="nav-link">Caminar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: #ffffff;
-                                    font-weight: bold;
-                                    background-color: rgb(134 201 255);
-                                    border-color: #dee2e6 #00dcff #fff;">Saltar la soga</a>
+                                    <a class="nav-link activ" >Saltar la soga</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link">Canotaje</a>
@@ -967,25 +918,21 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Autores</th>
-                                        <th scope="col">Legajo</th>
-                                        <th scope="col">Grupo</th>
+                                        <th scope="col">Diciplina</th>
+                                        <th scope="col">Edad recomendada</th>
+                                        <th scope="col">Dificultad</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Rubilar Francisco</td>
-                                        <td>Fai-2426</td>
-                                        <td>Amarillo</td>
+                                        <td>Saltar la soga</td>
+                                        <td> 12 a&ntilde;os en delante</td>
+                                        <td><strong class="text-primary" >MEDIO - DIFICIL</strong></td>
 
                                     </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Romero Pablo</td>
-                                        <td>Fai-1652</td>
-                                        <td>Amarillo</td>
-                                    </tr>
+                                  
+                                </tbody>
                                 </tbody>
                             </table>
                         </div><!-- cierre de columna con tabla -->
@@ -1035,10 +982,7 @@
                                     <a class="nav-link">Saltar la soga</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: #ffffff;
-                                    font-weight: bold;
-                                    background-color: rgb(134 201 255);
-                                    border-color: #dee2e6 #00dcff #fff;">Canotaje</a>
+                                    <a class="nav-link" >Canotaje</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link">Patinar</a>
@@ -1072,25 +1016,21 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Autores</th>
-                                        <th scope="col">Legajo</th>
-                                        <th scope="col">Grupo</th>
+                                        <th scope="col">Diciplina</th>
+                                        <th scope="col">Edad recomendada</th>
+                                        <th scope="col">Dificultad</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Rubilar Francisco</td>
-                                        <td>Fai-2426</td>
-                                        <td>Amarillo</td>
+                                        <td>Canotaje</td>
+                                        <td> 17 a&ntilde;os en delante</td>
+                                        <td><strong class="text-primary" >FACIL - MEDIO</strong></td>
 
                                     </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Romero Pablo</td>
-                                        <td>Fai-1652</td>
-                                        <td>Amarillo</td>
-                                    </tr>
+                                  
+                                </tbody>
                                 </tbody>
                             </table>
                         </div><!-- cierre de columna con tabla -->
@@ -1144,13 +1084,10 @@
                                     <a class="nav-link">Canotaje</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: #ffffff;
-                                    font-weight: bold;
-                                    background-color: rgb(134 201 255);
-                                    border-color: #dee2e6 #00dcff #fff;">Patinar</a>
+                                    <a class="nav-link activ" >Patinar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link">Sentadillas</a>
+                                    <a class="nav-link ">Sentadillas</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link">Pilates</a>
@@ -1180,25 +1117,21 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Autores</th>
-                                        <th scope="col">Legajo</th>
-                                        <th scope="col">Grupo</th>
+                                        <th scope="col">Diciplina</th>
+                                        <th scope="col">Edad recomendada</th>
+                                        <th scope="col">Dificultad</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Rubilar Francisco</td>
-                                        <td>Fai-2426</td>
-                                        <td>Amarillo</td>
+                                        <td>Patinar</td>
+                                        <td> 16 a&ntilde;os en delante</td>
+                                        <td><strong class="text-primary" >FACI - MEDIOL</strong></td>
 
                                     </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Romero Pablo</td>
-                                        <td>Fai-1652</td>
-                                        <td>Amarillo</td>
-                                    </tr>
+                                  
+                                </tbody>
                                 </tbody>
                             </table>
                         </div><!-- cierre de columna con tabla -->
@@ -1254,10 +1187,7 @@
                                     <a class="nav-link">Patinar</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: #ffffff;
-                                    font-weight: bold;
-                                    background-color: rgb(134 201 255);
-                                    border-color: #dee2e6 #00dcff #fff;">Sentadillas</a>
+                                    <a class="nav-link activ" >Sentadillas</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link">Pilates</a>
@@ -1286,25 +1216,21 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Autores</th>
-                                        <th scope="col">Legajo</th>
-                                        <th scope="col">Grupo</th>
+                                        <th scope="col">Diciplina</th>
+                                        <th scope="col">Edad recomendada</th>
+                                        <th scope="col">Dificultad</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Rubilar Francisco</td>
-                                        <td>Fai-2426</td>
-                                        <td>Amarillo</td>
+                                        <td>Sentadillas</td>
+                                        <td> 10 a&ntilde;os en delante</td>
+                                        <td><strong class="text-primary" >FACIL - MEDIO</strong></td>
 
                                     </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Romero Pablo</td>
-                                        <td>Fai-1652</td>
-                                        <td>Amarillo</td>
-                                    </tr>
+                                  
+                                </tbody>
                                 </tbody>
                             </table>
                         </div><!-- cierre de columna con tabla -->
@@ -1362,10 +1288,7 @@
                                     <a class="nav-link">Sentadillas</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="color: #ffffff;
-                                    font-weight: bold;
-                                    background-color: rgb(134 201 255);
-                                    border-color: #dee2e6 #00dcff #fff;">Pilates</a>
+                                    <a class="nav-link activ" >Pilates</a>
                                 </li>
                             </ul>
                         </div> <!-- cierre de columna lista (enlaces)-->
@@ -1391,25 +1314,21 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Autores</th>
-                                        <th scope="col">Legajo</th>
-                                        <th scope="col">Grupo</th>
+                                        <th scope="col">Diciplina</th>
+                                        <th scope="col">Edad recomendada</th>
+                                        <th scope="col">Dificultad</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">1</th>
-                                        <td>Rubilar Francisco</td>
-                                        <td>Fai-2426</td>
-                                        <td>Amarillo</td>
+                                        <td>Pilates</td>
+                                        <td> 19 a&ntilde;os en delante</td>
+                                        <td><strong class="text-primary" >FACIL - MEDIO</strong></td>
 
                                     </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Romero Pablo</td>
-                                        <td>Fai-1652</td>
-                                        <td>Amarillo</td>
-                                    </tr>
+                                  
+                                </tbody>
                                 </tbody>
                             </table>
                         </div><!-- cierre de columna con tabla -->
