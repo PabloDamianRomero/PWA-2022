@@ -140,3 +140,22 @@ h3 {
   margin-top: 30px;
   font-weight: 100;
 }
+
+.activ {
+  color: #ffffff;
+  font-weight: bold;
+  background-color: rgb(134 201 255);
+  border-color: #dee2e6 #00dcff #fff;
+}
+
+/* Base class */
+.callout {}
+
+/* Modifier classes */
+.callout-info {
+  border-left-color: aqua;
+}
+
+.callout-warning {}
+
+.callout-danger {}
