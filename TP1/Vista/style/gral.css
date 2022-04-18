@@ -149,13 +149,41 @@ h3 {
 }
 
 /* Base class */
-.callout {}
+.callout {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgb(104, 5, 5);
+  border-left-width: .25rem;
+  border-radius: .25rem
+}
 
 /* Modifier classes */
 .callout-info {
-  border-left-color: aqua;
+  border-left-color: rgb(70, 217, 228);
 }
 
-.callout-warning {}
+.callout-warning {
+  border-left-color: #f0ad4e
+}
 
-.callout-danger {}
+.callout-danger {
+
+  border-left-color: #d9534f;
+
+}
+
+.font_cinzel {
+  font-family: 'Cinzel Decorative', cursive;
+  font-family: 'Martel', serif;
+  font-size: 20px;
+  color: #1d1b1b;
+  text-shadow: 1px 1px #000000  ;
+
+}
+
+.cinzel {
+  font-family: 'Cinzel Decorative', cursive;
+  font-family: 'Martel', serif;
+  text-shadow: #1d1b1b;
+}
