@@ -2,13 +2,6 @@ body {
   background-color: rgb(177, 211, 238);
 }
 
-/* main {
-  background-image: url(https://images.pexels.com/photos/2803158/pexels-photo-2803158.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-} */
-
 .msj-bienv {
   font-size: 30px;
   text-shadow: 0px 0px 5px white;
@@ -146,6 +139,11 @@ h3 {
   font-weight: bold;
   background-color: rgb(134 201 255);
   border-color: #dee2e6 #00dcff #fff;
+  text-shadow: 0px 0px 3px #000;
+}
+
+.activ:hover {
+  color: #ffffff;
 }
 
 /* Base class */
@@ -178,8 +176,6 @@ h3 {
   font-family: 'Martel', serif;
   font-size: 20px;
   color: #1d1b1b;
-  text-shadow: 1px 1px #000000  ;
-
 }
 
 .cinzel {
