@@ -6,7 +6,7 @@ include_once "../configuracion.php";
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../../bootstrap-5.1.3-dist/css/bootstrap.min.css">
@@ -16,13 +16,39 @@ include_once "../configuracion.php";
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- fuente ubuntu -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
     <!-- Estilos propios -->
     <link rel="stylesheet" href="../../style/gral.css">
     <style>
+        body{
+            font-family: 'Ubuntu', sans-serif;
+        }
+
         h2 {
             color: #00000085;
             font-size: 1.2rem;
-}
+        }
+
+        /* estilos para elemento activo en tabs dinámicos (ej2) */
+        li.on{
+            background-color: #fff;
+        }
+
+        li.on a{
+            color: #000;
+        }
+
+        .tab-pane li{
+            margin-top: 5px;
+        }
+
+        .tab-content>.tab-pane {
+            display: initial;
+        }
     </style>
 
     <title><?php echo $titulo ?></title>

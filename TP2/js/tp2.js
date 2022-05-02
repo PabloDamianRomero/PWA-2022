@@ -1,5 +1,7 @@
+// ------------------------------------------------------------------------------------------------------------------
+// EJERCICIO 1 - Combo Select Dinámico
+
 document.body.onload = function () {
-    
     $('#lista_act').html('');
     $('#lista_act').html('<option selected="selected" disabled="disabled">Elija Actividad</option>');
     $.ajax({
@@ -37,7 +39,34 @@ $(function () {
         });
 });
 
+// ------------------------------------------------------------------------------------------------------------------
 
+
+// ------------------------------------------------------------------------------------------------------------------
+// EJERCICIO 2 - Tabs Dinámicos
+
+$(function(){
+    $('#tabs_dinamicas a').click(function(e){
+        $('#tabs_dinamicas li').removeClass('on'); // remueve la clase 'on' a todos los elementos 'li' dentro de clase 'tabs_dinamicas'
+        $(this).parent('li').addClass('on'); // this = elemento 'a'. Añade al padre 'li' la clase 'on'
+        var page = this.hash.substr(1); // Eliminar simbolo '#' de la cadena
+        // console.log(page);
+        $.get(page+'.php', function(gotHtml){
+            // console.log(html);
+            $('#content').html(gotHtml);
+        });
+        // return false;
+    });
+
+    // La propiedad location.hash establece o devuelve la parte ancla de una URL, incluido el signo de almohadilla (#).
+    if(location.hash){ // si existe la url de la pestaña 
+        $('a[href="'+ location.hash +'"]').click(); // click sobre el tab actual de la url
+    }else{
+        $('#tabs_dinamicas a:first').click();// click sobre el primer tab
+    }
+});
+
+// ------------------------------------------------------------------------------------------------------------------
 
 
 
