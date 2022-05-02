@@ -33,6 +33,8 @@
     <!-- Copyright -->
   </footer>
 
-  <script src="../bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
+  <script src="../../bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
+  <script src="../../js/jquery-3.6.0.min.js"></script>
+  <script src="../js/tp2.js"></script>
 </body>
 </html>
