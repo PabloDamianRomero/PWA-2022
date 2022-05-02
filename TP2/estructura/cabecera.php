@@ -35,45 +35,45 @@ include_once "../configuracion.php";
 
         /* estilos para elemento activo en tabs dinámicos (ej2) */
 
-        .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+        .contenido_ej2 .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
             border-color: #00000000;
         }
 
-        li.nav-item {
+        .contenido_ej2 li.nav-item {
             background-color: #46464633;
             border-top-left-radius: 15px;
             border-top-right-radius: 8px;
         }
 
-        li.nav-item a {
+        .contenido_ej2 li.nav-item a {
             color: #fff;
         }
 
-        li.nav-item a:hover {
+        .contenido_ej2 li.nav-item a:hover {
             color: yellow;
         }
 
-        li.on{
+        .contenido_ej2 li.on{
             background-color: #fff;
             border-top-left-radius: 15px;
             border-top-right-radius: 8px;
             border: 1px solid #bfaa08;
         }
 
-        li.on a{
+        .contenido_ej2 li.on a{
             color: #000;
             font-weight: 500;
         }
 
-        li.on a:visited{
+        .contenido_ej2 li.on a:visited{
             color: #000;
         }
 
-        .tab-pane li{
+        .contenido_ej2 .tab-pane li{
             margin-top: 5px;
         }
 
-        .tab-content>.tab-pane {
+        .contenido_ej2 .tab-content>.tab-pane {
             display: initial;
         }
     </style>

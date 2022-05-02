@@ -14,7 +14,7 @@ include_once "../estructura/cabecera.php";
 
 
 <!-- tabs dinámincas -->
-<section class="contenido-central">
+<section class="contenido-central contenido_ej2">
     <div class="container">
         <h3 class="text-center mt-5">Qué hacer antes y después del ejercicio</h3>
         
