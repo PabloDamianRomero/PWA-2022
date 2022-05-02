@@ -13,7 +13,7 @@ include_once "../estructura/cabecera.php";
 </div>
 
 
-<div class="container mt-5">
+<div class="container mt-5 contenido_ej1">
     <div class="card pt-4 pb-5">
         <div class="row justify-content-center">
             <div class="col-md-4">
@@ -24,7 +24,7 @@ include_once "../estructura/cabecera.php";
             </div>
             
             <div class="col-md-4">
-                <h2 class="text-center mb-4">Beneficio/s</h2>
+                <h2 class="text-center mb-4 enc_ben">Beneficio/s</h2>
                 <select class="form-select" id="lista_ben">
                     <!-- ... -->
                 </select>

@@ -33,6 +33,26 @@ include_once "../configuracion.php";
             font-size: 1.2rem;
         }
 
+        .contenido_ej1 select#lista_act {
+                width: 50%;
+                margin: 0 auto;
+                box-shadow: 0px 0px 2px #000000e3;
+            }
+
+        .contenido_ej1 select#lista_ben {
+            width: 50%;
+            margin: 0 auto;
+            box-shadow: 0px 0px 2px #000000e3;
+        }
+
+        /* media query (ej1) */
+        /* PANTALLA (menor-igual a 767px)*/
+        @media (max-width: 767px) {
+            .contenido_ej1 .enc_ben {
+                margin-top: 30px;
+            }
+        }
+
         /* estilos para elemento activo en tabs dinámicos (ej2) */
 
         .contenido_ej2 .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
