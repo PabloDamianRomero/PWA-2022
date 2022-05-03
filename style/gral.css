@@ -56,7 +56,8 @@ h3 {
 
 /* EJERCICIO 11 */
 .img-miniaturas {
-  background-color: rgba(255, 255, 255, 0.521);
+  /* background-color: rgba(255, 255, 255, 0.521); */
+  background-color: rgb(149 149 149 / 52%);
 }
 
 .fondo-subtitulo-cuadro {
@@ -64,7 +65,8 @@ h3 {
 }
 
 .fondo-parrafo-cuadro {
-  background-color: rgb(134 201 255);
+  /* background-color: rgb(134 201 255); */
+  background-color: rgb(205 229 109 / 38%);
   padding: 20px;
 }
 

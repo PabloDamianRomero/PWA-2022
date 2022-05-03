@@ -14,7 +14,7 @@ document.body.onload = function () {
 }
 
 $(function () {
-    
+
     $('#lista_act').on('change', function () {
         $('#resultado_combo').html('');
         var id = $('#lista_act').val();
@@ -33,7 +33,7 @@ $(function () {
      $('#lista_ben').on('change', function () {
          console.log("entra");
          $('#resultado_combo').html('');
-         $('#resultado_combo').html($('#resultado_combo').html() + 
+         $('#resultado_combo').html($('#resultado_combo').html() +
          'La actividad <strong>' + $("#lista_act option:selected").text() + '</strong>'
           + ' beneficia la/s: <strong>' + $("#lista_ben option:selected").text() + '</strong>');
         });
@@ -59,7 +59,7 @@ $(function(){
     });
 
     // La propiedad location.hash establece o devuelve la parte ancla de una URL, incluido el signo de almohadilla (#).
-    if(location.hash){ // si existe la url de la pestaña 
+    if(location.hash){ // si existe la url de la pestaña
         $('a[href="'+ location.hash +'"]').click(); // click sobre el tab actual de la url
     }else{
         $('#tabs_dinamicas a:first').click();// click sobre el primer tab
@@ -67,7 +67,41 @@ $(function(){
 });
 
 // ------------------------------------------------------------------------------------------------------------------
+// EJERCICIO 3 - Modal Dinámico
 
+$(function() {
+    // Modal button click action
+    $('.modal-button').click(function(e) {
+         e.preventDefault();
+         show_universal_modal($(this).attr('data-title'), $(this).attr('href'));
+    });
+});
+
+function show_universal_modal($title, $link, $size = '') {
+    // Checking if link is empty then return false
+    if ($link == '') {
+        alert("Content Link is null");
+        return false;
+    }
+    $('#universal_modal').find('.modal-body').html("<center>Loading data. Please wait ...</center>");
+    $('#universal_modal').find('.modal-title').html($title);
+    $('#universal_modal').modal('show');
+
+    // Fetching content via Ajax
+    $.ajax({
+        url: $link,
+        error: err => {
+            console.log(err);
+            $('#universal_modal').find('.modal-body').html("<div class='alert alert-danger'>Error fetching content.</div>");
+        },
+        success: function(resp) {
+            $('.modal-body').html('');
+            var container = $('<div class="container-fluid">');
+            container.html(resp);
+            $('#universal_modal').find('.modal-body').html(container);
+        }
+    });
+}
 
 
 

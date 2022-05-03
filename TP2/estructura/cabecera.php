@@ -96,6 +96,25 @@ include_once "../configuracion.php";
         .contenido_ej2 .tab-content>.tab-pane {
             display: initial;
         }
+
+        /* ejercicio 3 */
+        .contenido_ej3 ul.nav.flex-column.align-items-center.m-auto.lista_enlaces {
+            width: 100%;
+        }
+
+        .contenido_ej3 .lista_enlaces li.nav-item {
+            width: inherit;
+        }
+
+        .contenido_ej3 .img-miniaturas li.nav-item {
+            margin: 3px 5px;
+        }
+
+        .contenido_ej3 .lista_enlaces .nav-link:focus, .nav-link:hover {
+            color: #0043ff;
+            background-color: #b7b7b76b;
+        }
+        
     </style>
 
     <title><?php echo $titulo ?></title>
@@ -146,6 +165,10 @@ include_once "../configuracion.php";
                               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                 <li><a class="dropdown-item" href="../vista/ej01.php">Ejercicio 01</a></li>
                                 <li><a class="dropdown-item" href="../vista/ej02.php">Ejercicio 02</a></li>
+                                <li><a class="dropdown-item" href="../vista/ej03.php">Ejercicio 03</a></li>
+                                <li><a class="dropdown-item" href="../vista/ej04.php">Ejercicio 04</a></li>
+                                <li><a class="dropdown-item" href="../vista/ej05.php">Ejercicio 05</a></li>
+                                <li><a class="dropdown-item" href="../vista/ej06.php">Ejercicio 06</a></li>
                               </ul>
                             </div>
                           </li>
