@@ -82,40 +82,40 @@ include_once "../estructura/cabecera.php";
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav flex-column align-items-center m-auto lista_enlaces text-center">
                             <li class="nav-item">
-                                <a class="nav-link modal-button" data-title="Hacer yoga" href="modal/yoga.html">Yoga</a>
+                                <a id="content_src_yoga" class="nav-link modal-button" data-title="Hacer yoga" href="modal/yoga.html">Yoga</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link modal-button" data-title="Andar en bicicleta" href="modal/bicicleta.html">Bicicleta</a>
+                                <a id="content_src_bici" class="nav-link modal-button" data-title="Andar en bicicleta" href="modal/bicicleta.html">Bicicleta</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link modal-button" data-title="Correr" href="modal/correr.html">Correr</a>
+                                <a id="content_src_correr" class="nav-link modal-button" data-title="Correr" href="modal/correr.html">Correr</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link modal-button" data-title="Hacer natación" href="modal/natacion.html">Natación</a>
+                                <a id="content_src_natacion" class="nav-link modal-button" data-title="Hacer natación" href="modal/natacion.html">Natación</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link modal-button" data-title="Hacer abdominales" href="modal/abs.html">Abdominales</a>
+                                <a id="content_src_abdominales" class="nav-link modal-button" data-title="Hacer abdominales" href="modal/abs.html">Abdominales</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link modal-button" data-title="Bailar" href="modal/bailar.html">Bailar</a>
+                                <a id="content_src_bailar" class="nav-link modal-button" data-title="Bailar" href="modal/bailar.html">Bailar</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link modal-button" data-title="Salir a caminar" href="modal/caminar.html">Caminar</a>
+                                <a id="content_src_caminar" class="nav-link modal-button" data-title="Salir a caminar" href="modal/caminar.html">Caminar</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link modal-button" data-title="Saltar la soga" href="modal/soga.html">Saltar la soga</a>
+                                <a id="content_src_cuerda" class="nav-link modal-button" data-title="Saltar la soga" href="modal/soga.html">Saltar la soga</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link modal-button" data-title="Realizar canotaje" href="modal/canotaje.html">Canotaje</a>
+                                <a id="content_src_canotaje" class="nav-link modal-button" data-title="Realizar canotaje" href="modal/canotaje.html">Canotaje</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link modal-button" data-title="Patinar" href="modal/patinar.html">Patinar</a>
+                                <a id="content_src_patinar" class="nav-link modal-button" data-title="Patinar" href="modal/patinar.html">Patinar</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link modal-button" data-title="Realizar sentadillas" href="modal/sentadilla.html">Sentadillas</a>
+                                <a id="content_src_sentadilla" class="nav-link modal-button" data-title="Realizar sentadillas" href="modal/sentadilla.html">Sentadillas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link modal-button" data-title="Hacer pilates" href="modal/pilates.html">Pilates</a>
+                                <a id="content_src_pilates" class="nav-link modal-button" data-title="Hacer pilates" href="modal/pilates.html">Pilates</a>
                             </li>
                         </ul>
                     </div>
@@ -125,10 +125,23 @@ include_once "../estructura/cabecera.php";
             <!-- columna con imagen grande -->
             <div class="col-sm-8 border fondo-img-grande border border-primary">
                 <div class="text-center img-grande">
-                    <!-- <img class="img-fluid" src="#" alt="#"> -->
+                    <!-- big img -->
                 </div>
             </div><!-- cierre de columna con imagen grande -->
         </div><!-- cierre de fila con 2 columnas (lista/img) -->
+
+        <!-- fila con 2 columnas (tabla/parrafo) -->
+        <div class="row border">
+                        <!-- columna con tabla -->
+                        <div class="col-sm-8 border fondo-tabla">
+                            <!-- ... -->
+                        </div><!-- cierre de columna con tabla -->
+
+                        <!-- columna con párrafo -->
+                        <div class="col-sm-4 border fondo-parrafo-final">
+                            <!-- .. -->
+                        </div><!-- cierre de columna con párrafo -->
+                    </div><!-- cierre de fila con 2 columnas (tabla/parrafo) -->
     </div><!-- cierre container -->
 </section>
 

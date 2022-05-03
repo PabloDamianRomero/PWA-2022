@@ -73,17 +73,19 @@ $(function() {
     // Modal button click action
     $('.modal-button').click(function(e) {
          e.preventDefault();
-         show_universal_modal($(this).attr('data-title'), $(this).attr('href'));
+         var $a_id = $(this).attr('id'); // atributo id tiene el formato 'content_src_*'
+         $a_id = $a_id.substr(12); // elimino la parte 'content_src_'
+         show_universal_modal($(this).attr('data-title'), $(this).attr('href'), $a_id);
     });
 });
 
-function show_universal_modal($title, $link, $size = '') {
+function show_universal_modal($title, $link, $id = '') {
     // Checking if link is empty then return false
     if ($link == '') {
         alert("Content Link is null");
         return false;
     }
-    $('#universal_modal').find('.modal-body').html("<center>Loading data. Please wait ...</center>");
+    $('#universal_modal').find('.modal-body').html("<center>Cargando datos. Por favor aguarde ...</center>");
     $('#universal_modal').find('.modal-title').html($title);
     $('#universal_modal').modal('show');
 
@@ -96,11 +98,42 @@ function show_universal_modal($title, $link, $size = '') {
         },
         success: function(resp) {
             $('.modal-body').html('');
+            $('.img-grande').html('');
             var container = $('<div class="container-fluid">');
+            var bigImg = '<img class="img-fluid" src="../../TP1/img_tp1/big/'+ $id +'.jpg" alt="'+ $id +'">';
             container.html(resp);
             $('#universal_modal').find('.modal-body').html(container);
+            $('.fondo-img-grande').find('.img-grande').html(bigImg);
         }
     });
+
+    
+    var $tabla = 'modal/tabla_modal/'+ $link.substr(6);
+    $('.fondo-tabla').html('');
+    // Fetching content via Ajax
+    $.ajax({
+        url: $tabla,
+        error: err => {
+            console.log(err);
+        },
+        success: function(resp) {
+            $('.fondo-tabla').html(resp);
+        }
+    });
+
+    $('.fondo-parrafo-final').html('');
+    var $parrafo = 'modal/parrafo_modal/'+ $link.substr(6);
+    // Fetching content via Ajax
+    $.ajax({
+        url: $parrafo,
+        error: err => {
+            console.log(err);
+        },
+        success: function(resp) {
+            $('.fondo-parrafo-final').html(resp);
+        }
+    });
+    
 }
 
 
