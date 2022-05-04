@@ -365,6 +365,8 @@ $(function () {
                     console.log('Proceso de registro de contacto ajax completo');
                 });
         }
+
+        irHaciaArriba();
     });
 });
 
@@ -387,6 +389,12 @@ $(function () {
     });
 });
 
+
+function irHaciaArriba() {
+    var body = $("html, body");
+    body.stop().animate({ scrollTop: 0 }, 900, 'swing', function () {
+    });
+}
 
 
 
