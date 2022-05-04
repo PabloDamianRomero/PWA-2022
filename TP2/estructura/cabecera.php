@@ -114,6 +114,33 @@ include_once "../configuracion.php";
             color: #0043ff;
             background-color: #b7b7b76b;
         }
+
+        /* ejercicio 4 */
+
+        #form_ej4_tp2{
+            background-color: #fff;
+            box-shadow: 0px 0px 5px #0000004d;
+        }
+
+        #form_ej4_tp2 input{
+            background-color: #0000000f;
+        }
+
+        #form_ej4_tp2 textarea{
+            background-color: #0000000f;
+        }
+
+        /* media query (ej4) */
+        /* PANTALLA (menor-igual a 767px)*/
+        @media (max-width: 767px) {
+            #form_ej4_tp2{
+                width: 100%!important;
+            }
+
+            #col_empresa{
+                margin-top: 24px;
+            }
+        }
         
     </style>
 
