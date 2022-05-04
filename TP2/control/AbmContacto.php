@@ -142,7 +142,6 @@ class AbmContacto
         return $arreglo;
     }
 
-
     public function registroContacto($datos)
     {
         $mensaje = "";
@@ -151,12 +150,14 @@ class AbmContacto
         if (!$contactoExiste) { // si no existe el contacto en bd
             $resp = $this->alta($datos);
             if ($resp) { // si el contacto se pudo insertar en bd
-                $mensaje = "<strong>OK</strong>. Contacto registrado.";
+                $mensaje = "<p><strong>OK</strong>. Contacto registrado.</p>";
             } else {
-                $mensaje = "<strong class='text-danger'>Error</strong>. No se pudo registrar al contacto.";
+                $mensaje = "<p style='background-color: #ebff99'; padding: inherit;'><strong class='text-danger'>Error</strong>. No se pudo registrar al contacto.</p>";
             }
         } else {
-            $mensaje = "<strong class='text-danger'>Error</strong>. El contacto ya existe en la BD.";
+            $mensaje = "<p style='background-color: #99d9ff;
+            padding: inherit;
+            border: 1px solid #fff;'><strong class='text-danger'>Error</strong>. El contacto ya existe en la BD.</p>";
         }
         return $mensaje;
     }
