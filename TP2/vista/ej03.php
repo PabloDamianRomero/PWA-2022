@@ -33,40 +33,40 @@ include_once "../estructura/cabecera.php";
             <div class="col img-miniaturas">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <img src="../../TP1/img_tp1/small/min_yoga.jpg" alt="imagen de yoga">
+                        <img src="../../style/img/actividad_fisica/small/min_yoga.jpg" alt="imagen de yoga">
                     </li>
                     <li class="nav-item">
-                        <img src="../../TP1/img_tp1/small/min_bici.jpg" alt="Img de bici">
+                        <img src="../../style/img/actividad_fisica/small/min_bici.jpg" alt="Img de bici">
                     </li>
                     <li class="nav-item">
-                        <img src="../../TP1/img_tp1/small/min_correr.jpg" alt="Correr">
+                        <img src="../../style/img/actividad_fisica/small/min_correr.jpg" alt="Correr">
                     </li>
                     <li class="nav-item">
-                        <img src="../../TP1/img_tp1/small/min_natacion.jpg" alt="imagen de natacion">
+                        <img src="../../style/img/actividad_fisica/small/min_natacion.jpg" alt="imagen de natacion">
                     </li>
                     <li class="nav-item">
-                        <img src="../../TP1/img_tp1/small/min_abdominales.jpg" alt="imagen de abdominales">
+                        <img src="../../style/img/actividad_fisica/small/min_abdominales.jpg" alt="imagen de abdominales">
                     </li>
                     <li class="nav-item">
-                        <img src="../../TP1/img_tp1/small/min_bailar.jpg" alt="imagen de bailar">
+                        <img src="../../style/img/actividad_fisica/small/min_bailar.jpg" alt="imagen de bailar">
                     </li>
                     <li class="nav-item">
-                        <img src="../../TP1/img_tp1/small/min_caminar.jpg" alt="imagen de caminar">
+                        <img src="../../style/img/actividad_fisica/small/min_caminar.jpg" alt="imagen de caminar">
                     </li>
                     <li class="nav-item">
-                        <img src="../../TP1/img_tp1/small/min_cuerda.jpg" alt="imagen de cuerda">
+                        <img src="../../style/img/actividad_fisica/small/min_cuerda.jpg" alt="imagen de cuerda">
                     </li>
                     <li class="nav-item">
-                        <img src="../../TP1/img_tp1/small/min_canotaje.jpg" alt="imagen de canotaje">
+                        <img src="../../style/img/actividad_fisica/small/min_canotaje.jpg" alt="imagen de canotaje">
                     </li>
                     <li class="nav-item">
-                        <img src="../../TP1/img_tp1/small/min_patinar.jpg" alt="imagen de patinar">
+                        <img src="../../style/img/actividad_fisica/small/min_patinar.jpg" alt="imagen de patinar">
                     </li>
                     <li class="nav-item">
-                        <img src="../../TP1/img_tp1/small/min_sentadilla.jpg" alt="imagen de sentadillas">
+                        <img src="../../style/img/actividad_fisica/small/min_sentadilla.jpg" alt="imagen de sentadillas">
                     </li>
                     <li class="nav-item">
-                        <img src="../../TP1/img_tp1/small/min_pilates.jpg" alt="imagen de pilates">
+                        <img src="../../style/img/actividad_fisica/small/min_pilates.jpg" alt="imagen de pilates">
                     </li>
                 </ul>
             </div>

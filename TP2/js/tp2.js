@@ -100,7 +100,7 @@ function show_universal_modal($title, $link, $id = '') {
             $('.modal-body').html('');
             $('.img-grande').html('');
             var container = $('<div class="container-fluid">');
-            var bigImg = '<img class="img-fluid" src="../../TP1/img_tp1/big/' + $id + '.jpg" alt="' + $id + '">';
+            var bigImg = '<img class="img-fluid" src="../../style/img/actividad_fisica/big/' + $id + '.jpg" alt="' + $id + '">';
             container.html(resp);
             $('#universal_modal').find('.modal-body').html(container);
             $('.fondo-img-grande').find('.img-grande').html(bigImg);
