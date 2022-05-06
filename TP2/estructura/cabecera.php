@@ -146,6 +146,7 @@ include_once "../configuracion.php";
                 margin-top: 24px;
             }
         }
+
         
     </style>
 

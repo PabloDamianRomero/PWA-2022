@@ -415,6 +415,7 @@ $(function () {
         $('#resultadoRegistro').html('');
         $('#resultadoRegistro').removeClass('alert alert-danger');
         $('#resultadoRegistro').removeClass('alert alert-success');
+        $('#sugerenciaEstado').html('');
     });
 });
 
@@ -429,6 +430,7 @@ function irHaciaArriba() {
 
 // ------------------------------------------------------------------------------------------------------------------
 // EJERCICIO 5 - Formulario de registro
+
 $('th').addClass('text-center')
 
 $(document).ready(function () {
@@ -486,4 +488,37 @@ $(document).ready(function () {
     //     ]
     // })
 });
+
+
+// ------------------------------------------------------------------------------------------------------------------
+// EJERCICIO 6 - Sugerencias
+
+// validar estado en tiempo real
+
+$('#Estado').bind("propertychange change keyup input paste", function () {
+    var $campoEstado = $('#Estado').val();
+    var $sugerencias = document.getElementById('sugerenciaEstado');
+    var xmlhttp;
+    if(window.XMLHttpRequest){
+        xmlhttp = new XMLHttpRequest();
+    }else{
+        xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+    }
+
+    if($campoEstado.length === ''){
+        $sugerencias.innerHTML = '';
+    }else{
+        xmlhttp.onreadystatechange = function(){
+            if(xmlhttp.readyState === 4 && this.status === 200) {
+                $sugerencias.innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open('GET', 'http://localhost/pwa-2022/TP2/vista/accion/sugerir_estados.php?descripcion='+$campoEstado, true);
+        xmlhttp.send();
+    }
+});
+
+
+
+
 
