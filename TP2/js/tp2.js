@@ -143,6 +143,8 @@ $(function () {
     $('#Nombre').bind("propertychange change keyup input paste", function () {
         var $campoNombre = $('#Nombre').val();
         var $mensajeValidacion = '';
+        var $esNumero = false;
+        var $i = 0;
         $('#NombreValidacion').html('');
         $('#Nombre').removeClass('border-danger');
         if ($campoNombre.length == 0) {
@@ -150,8 +152,19 @@ $(function () {
             $('#Nombre').addClass('border-danger');
             $('#NombreValidacion').html($mensajeValidacion);
         }
-        if ($campoNombre.length > 20 || parseInt($campoNombre)) {
-            $mensajeValidacion = ' No puede ser numero O  Usuario debe ser menor a 20 caracteres.';
+        if ($campoNombre.length > 20) {
+            $mensajeValidacion = 'El nombre debe ser menor a 20 caracteres.';
+            $('#Nombre').addClass('border-danger');
+            $('#NombreValidacion').html($mensajeValidacion);
+        }
+        while(!$esNumero && $i < $campoNombre.length){
+            if(!isNaN($campoNombre[$i])){
+                $esNumero = true;
+            }
+            $i++;
+        }
+        if($esNumero){
+            $mensajeValidacion = 'El nombre no puede contener números.';
             $('#Nombre').addClass('border-danger');
             $('#NombreValidacion').html($mensajeValidacion);
         }
@@ -245,6 +258,8 @@ $(function () {
 function validarDatos($campoNombre, $campoEmpresa, $campoTelefono, $campoMail, $campoComentario) {
     var $esValido = true;
     var $mensajeValidacion = '';
+    var $esNumero = false;
+    var $i = 0;
     $('#NombreValidacion').html('');
     $('#Nombre').removeClass('border-danger');
     $('#EmpresaValidacion').html('');
@@ -264,10 +279,21 @@ function validarDatos($campoNombre, $campoEmpresa, $campoTelefono, $campoMail, $
         $esValido = false;
     }
     if ($campoNombre.length > 20) {
-        $mensajeValidacion = 'Usuario debe ser menor a 20 caracteres.';
+        $mensajeValidacion = 'El nombre debe ser menor a 20 caracteres.';
         $('#Nombre').addClass('border-danger');
         $('#NombreValidacion').html($mensajeValidacion);
         $esValido = false;
+    }
+    while(!$esNumero && $i < $campoNombre.length){
+        if(!isNaN($campoNombre[$i])){
+            $esNumero = true;
+        }
+        $i++;
+    }
+    if($esNumero){
+        $mensajeValidacion = 'El nombre no puede contener números.';
+        $('#Nombre').addClass('border-danger');
+        $('#NombreValidacion').html($mensajeValidacion);
     }
 
     // empresa
