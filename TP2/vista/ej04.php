@@ -64,7 +64,7 @@ include_once "../estructura/cabecera.php";
             <!-- Comentarios -->
             <div class="form-outline mb-4">
                 <label class="form-label" for="Comentario">Comentarios</label>
-                <textarea class="form-control" id="Comentario" rows="4" maxlength="200"></textarea>
+                <textarea class="form-control" id="Comentario" rows="4" maxlength="300"></textarea>
                 <p id="ComentarioValidacion" class="text-danger"></p>
             </div>
             

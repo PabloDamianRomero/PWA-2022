@@ -232,8 +232,8 @@ $(function () {
             $('#Comentario').addClass('border-danger');
             $('#ComentarioValidacion').html($mensajeValidacion);
         }
-        if ($campoComentario.length > 200) {
-            $mensajeValidacion = 'El comentario ha excedido los 200 caracteres.';
+        if ($campoComentario.length > 300) {
+            $mensajeValidacion = 'El comentario ha excedido los 300 caracteres.';
             $('#Comentario').addClass('border-danger');
             $('#ComentarioValidacion').html($mensajeValidacion);
         }
@@ -321,8 +321,8 @@ function validarDatos($campoNombre, $campoEmpresa, $campoTelefono, $campoMail, $
         $('#ComentarioValidacion').html($mensajeValidacion);
         $esValido = false;
     }
-    if ($campoComentario.length > 200) {
-        $mensajeValidacion = 'El comentario ha excedido los 200 caracteres.';
+    if ($campoComentario.length > 300) {
+        $mensajeValidacion = 'El comentario ha excedido los 300 caracteres.';
         $('#Comentario').addClass('border-danger');
         $('#ComentarioValidacion').html($mensajeValidacion);
         $esValido = false;
