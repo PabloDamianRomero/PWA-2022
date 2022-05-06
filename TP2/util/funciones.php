@@ -34,4 +34,11 @@ spl_autoload_register(function ($class_name){
     }
 });
 
+function mostrarArray($arreglo) {
+    echo "<pre>";
+    print_r($arreglo);
+    echo "</pre>";
+  }
+  
+
 ?>

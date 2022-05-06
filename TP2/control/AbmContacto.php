@@ -104,8 +104,8 @@ class AbmContacto
 
     /**
      * permite buscar un objeto
-     * @param array $param
-     * @return boolean
+     * @param array 
+     * @return 
      */
     // public function setear($IdContacto, $Nombre, $Empresa, $Telefono, $Mail, $Comentario)
     public function buscar($param)

@@ -16,6 +16,11 @@ include_once "../configuracion.php";
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- css de datatables.net -->
+    <!-- <link rel="stylesheet" href="../../style/datable.css"> -->
+    <!-- <link rel="stylesheet" href="../util/DataTables-1.11.5/css/jquery.dataTables.min.css"> -->
+    <link rel="stylesheet" href="../util/DataTables-1.11.5/css/dataTables.bootstrap5.min.css">
+
     <!-- fuente ubuntu -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

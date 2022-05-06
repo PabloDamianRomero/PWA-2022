@@ -34,8 +34,8 @@ $(function () {
         console.log("entra");
         $('#resultado_combo').html('');
         $('#resultado_combo').html($('#resultado_combo').html() +
-            'La actividad <strong>' + $("#lista_act option:selected").text() + '</strong>'
-            + ' beneficia la/s: <strong>' + $("#lista_ben option:selected").text() + '</strong>');
+            'La actividad <strong>' + $("#lista_act option:selected").text() + '</strong>' +
+            ' beneficia la/s: <strong>' + $("#lista_ben option:selected").text() + '</strong>');
     });
 });
 
@@ -62,7 +62,7 @@ $(function () {
     if (location.hash) { // si existe la url de la pestaña
         $('a[href="' + location.hash + '"]').click(); // click sobre el tab actual de la url
     } else {
-        $('#tabs_dinamicas a:first').click();// click sobre el primer tab
+        $('#tabs_dinamicas a:first').click(); // click sobre el primer tab
     }
 });
 
@@ -150,8 +150,8 @@ $(function () {
             $('#Nombre').addClass('border-danger');
             $('#NombreValidacion').html($mensajeValidacion);
         }
-        if ($campoNombre.length > 20) {
-            $mensajeValidacion = 'Usuario debe ser menor a 20 caracteres.';
+        if ($campoNombre.length > 20 || parseInt($campoNombre)) {
+            $mensajeValidacion = ' No puede ser numero O  Usuario debe ser menor a 20 caracteres.';
             $('#Nombre').addClass('border-danger');
             $('#NombreValidacion').html($mensajeValidacion);
         }
@@ -347,14 +347,15 @@ $(function () {
             var $ruta = 'Nombre=' + $campoNombre + '&Empresa=' + $campoEmpresa + '&Telefono=' + $campoTelefono + '&Mail=' + $campoMail + '&Comentario=' + $campoComentario;
             $('#resultadoRegistro').html('');
             $.ajax({
-                url: 'http://localhost/pwa-2022/TP2/vista/accion/registrar_contacto.php',
-                type: 'POST',
-                data: $ruta,
-            })
+                    url: 'http://localhost/pwa-2022/TP2/vista/accion/registrar_contacto.php',
+                    type: 'POST',
+                    data: $ruta,
+                })
                 .done(function (res) { // exito
                     $('#resultadoRegistro').removeClass('alert alert-danger');
                     $('#resultadoRegistro').addClass('alert alert-success');
                     $('#resultadoRegistro').html(res);
+
                 })
                 .fail(function () {
                     $('#resultadoRegistro').removeClass('alert alert-success');
@@ -364,9 +365,11 @@ $(function () {
                 .always(function () {
                     console.log('Proceso de registro de contacto ajax completo');
                 });
+
         }
 
         irHaciaArriba();
+
     });
 });
 
@@ -392,12 +395,69 @@ $(function () {
 
 function irHaciaArriba() {
     var body = $("html, body");
-    body.stop().animate({ scrollTop: 0 }, 900, 'swing', function () {
-    });
+    body.stop().animate({
+        scrollTop: 0
+    }, 900, 'swing', function () {});
 }
 
 
+// ------------------------------------------------------------------------------------------------------------------
+// EJERCICIO 5 - Formulario de registro
+$('th').addClass('text-center')
 
+$(document).ready(function () {
+    
 
+    $('#listaContacto').DataTable({
+        'ajax': {
+            'url': '../vista/accion/listar_contactos.php',
+            'dataSrc': ''
 
+        },
+        'columns': [{
+                'data': 'idContacto'
+            },
+            {
+                'data': 'Nombre'
+            },
+            {
+                'data': 'Empresa'
+            },
+            {
+                'data': 'Telefono'
+            },
+            {
+                'data': 'Mail'
+            },
+            {
+                'data': 'Comentario'
+            },
+        ],
+        'pageLength': 5,
+        "language": {
+            "lengthMenu": "Mostrar _MENU_ registros",
+            "zeroRecords": "No se encontraron resultados",
+            "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+            "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+            "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+            "sSearch": "Buscar:",
+            "oPaginate": {
+                "sFirst": "Primero",
+                "sLast": "Último",
+                "sNext": "Siguiente",
+                "sPrevious": "Anterior"
+            },
+            "sProcessing": "Procesando...",
+        },
+        
+    })
+    $('#listaContacto_length').hide();
+    // let table = $('#listaContacto').DataTable({
+    //     pageLength: 5,
+    //     lengthMenu: [
+    //         [5, 10, 20, -1],
+    //         [5, 10, 20, 'Todos']
+    //     ]
+    // })
+});
 

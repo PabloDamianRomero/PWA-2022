@@ -36,5 +36,8 @@
   <script src="../../bootstrap-5.1.3-dist/js/bootstrap.js"></script>
   <script src="../../js/jquery-3.6.0.min.js"></script>
   <script src="../js/tp2.js"></script>
+  <!-- <script src="../../js/datatables.js"></script> -->
+  <script src="../util/DataTables-1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="../util/DataTables-1.11.5/js/dataTables.bootstrap5.min.js"></script>
 </body>
 </html>
