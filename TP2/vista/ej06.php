@@ -69,7 +69,7 @@ include_once "../estructura/cabecera.php";
             </div>
 
             
-            <div id="sugerenciaEstado" class="text-center overflow-auto pt-4 pb-2 m-3" style="height:140px;">
+            <div id="sugerenciaEstado" class="text-center overflow-auto pt-2 pb-2 m-3" style="height:100px; background-color: #e9e9e9;">
                 <!-- ... -->
             </div>
             
