@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 5.1.0
+-- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-03-2017 a las 23:10:01
--- Versión del servidor: 10.1.16-MariaDB
--- Versión de PHP: 5.6.24
+-- Tiempo de generación: 06-05-2022 a las 06:18:46
+-- Versión del servidor: 10.4.19-MariaDB
+-- Versión de PHP: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,6 +20,50 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `practicoajax`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `actividad`
+--
+
+CREATE TABLE `actividad` (
+  `id_actividad` int(11) NOT NULL,
+  `nombreActividad` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `actividad`
+--
+
+INSERT INTO `actividad` (`id_actividad`, `nombreActividad`) VALUES
+(1, 'Yoga'),
+(2, 'Bicicleta'),
+(3, 'Correr');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `beneficio`
+--
+
+CREATE TABLE `beneficio` (
+  `id_beneficio` int(11) NOT NULL,
+  `nombreBeneficio` varchar(50) NOT NULL,
+  `id_actividad` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `beneficio`
+--
+
+INSERT INTO `beneficio` (`id_beneficio`, `nombreBeneficio`, `id_actividad`) VALUES
+(1, 'Relajación', 1),
+(2, 'Coordinación', 1),
+(3, 'Oxigenación', 2),
+(4, 'Endorfinas', 3),
+(5, 'Confianza', 1),
+(6, 'Fortaleza', 2);
 
 -- --------------------------------------------------------
 
@@ -35,6 +80,30 @@ CREATE TABLE `contactos` (
   `Comentario` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `contactos`
+--
+
+INSERT INTO `contactos` (`IdContacto`, `Nombre`, `Empresa`, `Telefono`, `Mail`, `Comentario`) VALUES
+(1, 'Emiliano', 'FSR', '2980000000', 'correo1@gmail.com', 'Kanban es un sistema de información que controla de modo armónico la fabricación de los productos necesarios en la cantidad y tiempo necesarios en cada uno de los procesos que tienen lugar tanto en el interior de la fábrica, como entre distintas empresas.'),
+(2, 'Luciana', 'TOYOTA', '2991111111', 'correo2@gmail.com', 'Ajax es una técnica de desarrollo web para crear aplicaciones web asíncronas'),
+(3, 'Lucas', 'LUNARI DESIGN', '2992222222', 'correo3@gmail.com', 'PHP es un lenguaje de programación de uso general que se adapta especialmente al desarrollo web.​'),
+(4, 'Nadia', 'SONY', '2993333333', 'correo4@gmail.com', 'Angular es un framework para aplicaciones web desarrollado en TypeScript'),
+(5, 'Franco', 'YAHOO', '2994444444', 'correo5@gmail.com', 'PDO permite acceder a diferentes sistemas de bases de datos con un controlador específico (MySQL, SQLite, Oracle...) mediante el cual se conecta.'),
+(6, 'Maria', 'MICROSOFT', '2995555555', 'correo6@gmail.com', 'datatables es una extensión de jQuery que nos permite pintar tablas con paginado, búsqueda, ordenar por columnas, etc.'),
+(7, 'Jin', 'SUCKER PUNCH', '2996666666', 'correo7@gmail.com', 'MVC es un patrón de arquitectura de software, que separa los datos y principalmente lo que es la lógica de negocio de una aplicación de su representación y el módulo encargado de gestionar los eventos y las comunicaciones.'),
+(8, 'Garcian', 'GRASSHOPPER MANUFACTURE', '2997777777', 'correo8@gmail.com', 'jQuery consiste en un único fichero JavaScript que contiene las funcionalidades comunes de DOM, eventos, efectos y AJAX.'),
+(9, 'Laura', 'KONAMI', '2998888888', 'correo8@gmail.com', 'SQL es un lenguaje de dominio específico, diseñado para administrar, y recuperar información de sistemas de gestión de bases de datos relacionales.​'),
+(10, 'Carlos', 'NOKIA', '2990000000', 'correo9@gmail.com', 'Bootstrap es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web.'),
+(11, 'Agustina', 'CANON', '2901111111', 'correo10@gmail.com', 'Oracle Corporation es una compañía especializada en el desarrollo de soluciones de nube y locales.'),
+(12, 'Carla', 'GOOGLE', '2902222222', 'correo11@gmail.com', 'El diseño web es una actividad que consiste en la planificación, diseño, implementación y mantenimiento de sitios web.'),
+(13, 'Matias', 'SPOTYFY', '2903333333', 'correo12@gmail.com', 'La usabilidad web es el grado de facilidad de uso que tiene una página web para los usuarios que acceden e interactúan con ella.'),
+(14, 'Francisco', 'ORACLE', '2904444444', 'correo13@gmail.com', 'W3C es un consorcio internacional que genera recomendaciones y estándares que aseguran el crecimiento de la World Wide Web a largo plazo.'),
+(15, 'José', 'SKYPE', '2905555555', 'correo14@gmail.com', 'HTTP es el protocolo de comunicación que permite las transferencias de información a través de archivos (XHML, HTML…) en la World Wide Web.'),
+(16, 'Nicolas', 'AMAZON', '2906666666', 'correo15@gmail.com', 'Una cookie es pequeña información enviada por un sitio web y almacenada en el navegador del usuario'),
+(17, 'Luna', 'REEBOK', '2907777777', 'correo16@gmail.com', 'El desarrollo web Front-end consiste en la conversión de datos en una interfaz gráfica para que el usuario pueda ver e interactuar con la información de forma digital usando HTML, CSS y JavaScript.'),
+(18, 'Pablo', 'Ninguna', '2995055090', 'mail@gmail.com', 'este es un comentario');
+
 -- --------------------------------------------------------
 
 --
@@ -44,7 +113,7 @@ CREATE TABLE `contactos` (
 CREATE TABLE `estados` (
   `id` int(5) UNSIGNED NOT NULL,
   `descripcion` varchar(100) NOT NULL,
-  `idPais` int(3) UNSIGNED NOT NULL DEFAULT '0'
+  `idPais` int(3) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -549,7 +618,7 @@ INSERT INTO `estados` (`id`, `descripcion`, `idPais`) VALUES
 --
 
 CREATE TABLE `paises` (
-  `id` int(3) UNSIGNED NOT NULL DEFAULT '0',
+  `id` int(3) UNSIGNED NOT NULL DEFAULT 0,
   `descripcion` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -630,6 +699,19 @@ INSERT INTO `usuarios` (`IdUsuario`, `Usuario`, `Clave`, `Nombre`, `Apellido`) V
 --
 
 --
+-- Indices de la tabla `actividad`
+--
+ALTER TABLE `actividad`
+  ADD PRIMARY KEY (`id_actividad`);
+
+--
+-- Indices de la tabla `beneficio`
+--
+ALTER TABLE `beneficio`
+  ADD PRIMARY KEY (`id_beneficio`),
+  ADD KEY `id_actividad` (`id_actividad`);
+
+--
 -- Indices de la tabla `contactos`
 --
 ALTER TABLE `contactos`
@@ -665,107 +747,6 @@ ALTER TABLE `usuarios`
 --
 
 --
--- AUTO_INCREMENT de la tabla `contactos`
---
-ALTER TABLE `contactos`
-  MODIFY `IdContacto` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT de la tabla `estados`
---
-ALTER TABLE `estados`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=490;
---
--- AUTO_INCREMENT de la tabla `tabs`
---
-ALTER TABLE `tabs`
-  MODIFY `idTab` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT de la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  MODIFY `IdUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `estados`
---
-ALTER TABLE `estados`
-  ADD CONSTRAINT `cf_paises` FOREIGN KEY (`idPais`) REFERENCES `paises` (`id`);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `actividad`
---
-
-CREATE TABLE `actividad` (
-  `id_actividad` int(11) NOT NULL,
-  `nombreActividad` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `actividad`
---
-
-INSERT INTO `actividad` (`id_actividad`, `nombreActividad`) VALUES
-(1, 'Yoga'),
-(2, 'Bicicleta'),
-(3, 'Correr');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `beneficio`
---
-
-CREATE TABLE `beneficio` (
-  `id_beneficio` int(11) NOT NULL,
-  `nombreBeneficio` varchar(50) NOT NULL,
-  `id_actividad` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `beneficio`
---
-
-INSERT INTO `beneficio` (`id_beneficio`, `nombreBeneficio`, `id_actividad`) VALUES
-(1, 'Relajación', 1),
-(2, 'Coordinación', 1),
-(3, 'Oxigenación', 2),
-(4, 'Endorfinas', 3),
-(5, 'Confianza', 1),
-(6, 'Fortaleza', 2);
-
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `actividad`
---
-ALTER TABLE `actividad`
-  ADD PRIMARY KEY (`id_actividad`);
-
---
--- Indices de la tabla `beneficio`
---
-ALTER TABLE `beneficio`
-  ADD PRIMARY KEY (`id_beneficio`),
-  ADD KEY `id_actividad` (`id_actividad`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
 -- AUTO_INCREMENT de la tabla `actividad`
 --
 ALTER TABLE `actividad`
@@ -778,6 +759,30 @@ ALTER TABLE `beneficio`
   MODIFY `id_beneficio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=182;
 
 --
+-- AUTO_INCREMENT de la tabla `contactos`
+--
+ALTER TABLE `contactos`
+  MODIFY `IdContacto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT de la tabla `estados`
+--
+ALTER TABLE `estados`
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=490;
+
+--
+-- AUTO_INCREMENT de la tabla `tabs`
+--
+ALTER TABLE `tabs`
+  MODIFY `idTab` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `IdUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- Restricciones para tablas volcadas
 --
 
@@ -786,4 +791,14 @@ ALTER TABLE `beneficio`
 --
 ALTER TABLE `beneficio`
   ADD CONSTRAINT `beneficio_ibfk_1` FOREIGN KEY (`id_actividad`) REFERENCES `actividad` (`id_actividad`);
+
+--
+-- Filtros para la tabla `estados`
+--
+ALTER TABLE `estados`
+  ADD CONSTRAINT `cf_paises` FOREIGN KEY (`idPais`) REFERENCES `paises` (`id`);
 COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
