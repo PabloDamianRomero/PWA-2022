@@ -13,7 +13,7 @@
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2022 Copyright:
-      <a class="text-warning" href="https://drive.google.com/file/d/1WJz5wACYUUbsvBbEfmDCmlF_AbYg0qR2/view?usp=sharing" target="_blank">Grupo Amarillo</a>
+      <a class="text-warning" href="https://github.com/PabloDamianRomero/PWA-2022/blob/main/style/img/grupo_amarillo.png?raw=true" target="_blank">Grupo Amarillo</a>
     </div>
     <!-- Copyright -->
   </footer>
