@@ -11,4 +11,4 @@ Integrantes (Grupo Amarillo):
  * FRANCISCO EMILIO RUBILAR
  * PABLO DAMIAN ROMERO
 
- ![Grupo Amarillo](https://github.com/PabloDamianRomero/PWA-2022//blob/main/style/img/grupo_amarillo.png)
+ ![Grupo Amarillo](https://github.com/PabloDamianRomero/PWA-2022/blob/main/style/img/grupo_amarillo.png?raw=true)
