@@ -16,6 +16,10 @@ document.body.onload = function () {
 $(function () {
 
     $('#lista_act').on('change', function () {
+        if(!$('#msj').hasClass('d-none')){
+
+            $('#msj').toggleClass('d-none');
+        }
         $('#resultado_combo').html('');
         var id = $('#lista_act').val();
         var url = 'http://localhost/pwa-2022/TP2/vista/accion/cargar_beneficio.php';
