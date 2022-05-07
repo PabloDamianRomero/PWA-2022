@@ -36,7 +36,7 @@ include_once "../estructura/cabecera.php";
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-4">
-                <div class="alert alert-success d-flex text-center border border-2 border-dark" role="alert">
+                <div id="msj" class="alert alert-success d-flex text-center border border-2 border-dark d-none" role="alert">
                     <p id="resultado_combo"></p>
                 </div>
             </div>
