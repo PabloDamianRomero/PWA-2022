@@ -36,6 +36,7 @@ $(function () {
     });
     $('#lista_ben').on('change', function () {
         console.log("entra");
+         $('#msj').toggleClass('d-none');
         $('#resultado_combo').html('');
         $('#resultado_combo').html($('#resultado_combo').html() +
             'La actividad <strong>' + $("#lista_act option:selected").text() + '</strong>' +
