@@ -504,55 +504,55 @@ $(document).ready(function () {
 
 
 // ------------------------------------------------------------------------------------------------------------------
-// EJERCICIO 6 - Sugerencias
+// EJERCICIO 6 - Sugerencias  (CON DIV)
 
 // validar estado en tiempo real
 
-$('#Estado').bind("propertychange change keyup input paste", function () {
-    var $campoEstado = $('#Estado').val();
-    var $sugerencias = document.getElementById('sugerenciaEstado');
-    var xmlhttp;
-    if(window.XMLHttpRequest){
-        xmlhttp = new XMLHttpRequest();
-    }else{
-        xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
-    }
+// $('#Estado').bind("propertychange change keyup input paste", function () {
+//     var $campoEstado = $('#Estado').val();
+//     var $sugerencias = document.getElementById('sugerenciaEstado');
+//     var xmlhttp;
+//     if(window.XMLHttpRequest){
+//         xmlhttp = new XMLHttpRequest();
+//     }else{
+//         xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+//     }
 
-    if($campoEstado.length === ''){
-        $sugerencias.innerHTML = '';
-    }else{
-        xmlhttp.onreadystatechange = function(){
-            if(xmlhttp.readyState === 4 && this.status === 200) {
-                $sugerencias.innerHTML = xmlhttp.responseText;
-            }
-        }
-        xmlhttp.open('GET', 'http://localhost/pwa-2022/TP2/vista/accion/sugerir_estados.php?descripcion='+$campoEstado, true);
-        xmlhttp.send();
-    }
-});
+//     if($campoEstado.length === ''){
+//         $sugerencias.innerHTML = '';
+//     }else{
+//         xmlhttp.onreadystatechange = function(){
+//             if(xmlhttp.readyState === 4 && this.status === 200) {
+//                 $sugerencias.innerHTML = xmlhttp.responseText;
+//             }
+//         }
+//         xmlhttp.open('GET', 'http://localhost/pwa-2022/TP2/vista/accion/sugerir_estados.php?descripcion='+$campoEstado, true);
+//         xmlhttp.send();
+//     }
+// });
 
 //Alternativa 
 
 // --------------------------------------------------------------
 // Autocompleta combo con BD usando interface ( widget jquery )
 //---------------------------------------------------------------
-// $(document).ready(function () {
-//     $('#Estado').autocomplete({
-//         source: function(data,callB){
-//             $.ajax({
-//                 method: "GET",
-//                 url: "accion/listar_ciudades.php",
-//                 data: {
-//                     param : data.term
-//                 },
-//                 dataType: "json",
-//                 success: function (res) {
-//                     callB(res)
-//                 }
-//             });
-//         }
-//     })
-// });
+//  $(document).ready(function () {
+//      $('#Estado').autocomplete({
+//          source: function(data,callB){
+//              $.ajax({
+//                  method: "GET",
+//                  url: "accion/listar_ciudades.php",
+//                  data: {
+//                      param : data.term
+//                  },
+//                  dataType: "json",
+//                  success: function (res) {
+//                      callB(res)
+//                  }
+//              });
+//          }
+//      })
+//  });
 
 // autocompletar con listas  input 
 //--------------------------------
@@ -565,7 +565,6 @@ $(document).ready(function () {
                 type: "get",
                 url: "accion/listar_ciudades2.php",
                 data: {param:query},
-                // dataType: "json",
                 success: function (data) {
                     $('#rta').fadeIn();
                     $('#rta').html(data);
@@ -574,10 +573,10 @@ $(document).ready(function () {
         }
         var string = $('#Estado').val()
         if(string.length == 0){
-            $('#Estado').val('')
+            $('#Estado').val('');
         }
     });
-    $(document).on('click','li', function () {
+    $('#rta').on('click','li', function () {
         $('#Estado').val($(this).text());
         $('#rta').fadeOut();
     });
