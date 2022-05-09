@@ -12,7 +12,7 @@ document.body.onload = function () {
         }
     });
 }
-/* Carga en combo las distintas actividades existentes en BD */
+
 $(function () {
 
     $('#lista_act').on('change', function () {
@@ -34,11 +34,9 @@ $(function () {
         });
         return false;
     });
-    /* Select Beneficios  */
     $('#lista_ben').on('change', function () {
-        console.log("entro");
-        
-        $('#msj').removeClass('d-none');
+        console.log("entra");
+         $('#msj').toggleClass('d-none');
         $('#resultado_combo').html('');
         $('#resultado_combo').html($('#resultado_combo').html() +
             'La actividad <strong>' + $("#lista_act option:selected").text() + '</strong>' +
@@ -75,13 +73,6 @@ $(function () {
 
 // ------------------------------------------------------------------------------------------------------------------
 // EJERCICIO 3 - Modal Dinámico
-
-
-$(document).ready(function () {
-    $('#content_src_bici').mouseenter(function () { 
-        $('#img_grande').html();
-    });
-});
 
 $(function () {
     // Modal button click action
@@ -154,7 +145,6 @@ function show_universal_modal($title, $link, $id = '') {
 
 // validar nombre en tiempo real
 $(function () {
-    $('#Nombre').val('') /* para que al recargar no queden los input con datos */
     $('#Nombre').bind("propertychange change keyup input paste", function () {
         var $campoNombre = $('#Nombre').val();
         var $mensajeValidacion = '';
@@ -188,7 +178,6 @@ $(function () {
 
 // validar empresa en tiempo real
 $(function () {
-    $('#Empresa').val('') /* para que al recargar no queden los input con datos */
     $('#Empresa').bind("propertychange change keyup input paste", function () {
         var $campoEmpresa = $('#Empresa').val();
         var $mensajeValidacion = '';
@@ -209,7 +198,6 @@ $(function () {
 
 // validar telefono en tiempo real
 $(function () {
-    $('#Telefono').val('') /* para que al recargar no queden los input con datos */
     $('#Telefono').bind("propertychange change keyup input paste", function () {
         var $campoTelefono = $('#Telefono').val();
         var $mensajeValidacion = '';
@@ -231,7 +219,6 @@ $(function () {
 
 // validar mail en tiempo real
 $(function () {
-    $('#Email').val('') /* para que al recargar no queden los input con datos */
     $('#Email').bind("propertychange change keyup input paste", function () {
         var $campoMail = $('#Email').val();
         var $mensajeValidacion = '';
@@ -253,7 +240,6 @@ $(function () {
 
 // validar comentario en tiempo real
 $(function () {
-    $('#Comentario').val('') /* para que al recargar no queden los input con datos */
     $('#Comentario').bind("propertychange change keyup input paste", function () {
         var $campoComentario = $('#Comentario').val();
         var $mensajeValidacion = '';
@@ -458,7 +444,7 @@ $(document).ready(function () {
     $('#listaContacto').DataTable({
         'ajax': {
             'url': '../vista/accion/listar_contactos.php',
-             'dataSrc': ''
+            'dataSrc': ''
 
         },
         'columns': [{
@@ -499,7 +485,13 @@ $(document).ready(function () {
         
     })
     $('#listaContacto_length').hide();
-    
+    // let table = $('#listaContacto').DataTable({
+    //     pageLength: 5,
+    //     lengthMenu: [
+    //         [5, 10, 20, -1],
+    //         [5, 10, 20, 'Todos']
+    //     ]
+    // })
 });
 
 
@@ -529,58 +521,6 @@ $('#Estado').bind("propertychange change keyup input paste", function () {
         xmlhttp.open('GET', 'http://localhost/pwa-2022/TP2/vista/accion/sugerir_estados.php?descripcion='+$campoEstado, true);
         xmlhttp.send();
     }
-});
-
-//Alternativa 
-
-// --------------------------------------------------------------
-// Autocompleta combo con BD usando interface ( widget jquery )
-//---------------------------------------------------------------
-// $(document).ready(function () {
-//     $('#Estado').autocomplete({
-//         source: function(data,callB){
-//             $.ajax({
-//                 method: "GET",
-//                 url: "accion/listar_ciudades.php",
-//                 data: {
-//                     param : data.term
-//                 },
-//                 dataType: "json",
-//                 success: function (res) {
-//                     callB(res)
-//                 }
-//             });
-//         }
-//     })
-// });
-
-// autocompletar con listas  input 
-//--------------------------------
-$(document).ready(function () {
-    $('#Estado').val('')
-    $('#Estado').keyup(function () { 
-        var query = $(this).val();
-        if (query != '') {
-            $.ajax({
-                type: "get",
-                url: "accion/listar_ciudades2.php",
-                data: {param:query},
-                // dataType: "json",
-                success: function (data) {
-                    $('#rta').fadeIn();
-                    $('#rta').html(data);
-                }
-            });
-        }
-        var string = $('#Estado').val()
-        if(string.length == 0){
-            $('#Estado').val('')
-        }
-    });
-    $(document).on('click','li', function () {
-        $('#Estado').val($(this).text());
-        $('#rta').fadeOut();
-    });
 });
 
 

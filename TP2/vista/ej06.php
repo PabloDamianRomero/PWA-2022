@@ -66,6 +66,7 @@ include_once "../estructura/cabecera.php";
                 <label class="form-label" for="Estado">Estado</label>
                 <input type="text" id="Estado" class="form-control" maxlength="100"/>
                 <p id="EstadoValidacion" class="text-danger"></p>
+                <div id="rta" class="text-danger"></div>
             </div>
 
             
