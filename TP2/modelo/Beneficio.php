@@ -175,7 +175,7 @@ class Beneficio{
                     $obj= new Beneficio();
                     $actividad = new Actividad();
                     $actividad->setIdActividad($row['id_actividad']);
-                    $actividad->cargar(); // el cargar de actividad, lo q hace es $sql="SELECT * FROM actividad WHERE id_actividad = ".$this->getIdActividad(); me trae una actividad con el unico parametro que necesito, q es el id
+                    $actividad->cargar();
                     $obj->setear($row['id_beneficio'], $row['nombreBeneficio'], $actividad);
                     array_push($arreglo, $obj);
                 }

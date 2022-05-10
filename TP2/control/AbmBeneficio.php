@@ -60,7 +60,7 @@ class AbmBeneficio
         $resp = false;
         $elObjBeneficio = $this->cargarObjeto($param);
         $nuevoArray['id_beneficio'] = $param['id_beneficio'];
-        $beneficioExiste = $this->buscar($nuevoArray); // verifico si el auto ya existe en la bd
+        $beneficioExiste = $this->buscar($nuevoArray); // verifico si el beneficio ya existe en la bd
         if ((count($beneficioExiste) == 0) and $elObjBeneficio != null and $elObjBeneficio->insertar()) {
             $resp = true;
         }
@@ -78,7 +78,7 @@ class AbmBeneficio
         if ($this->seteadosCamposClaves($param)) {
             $elObjBeneficio = $this->cargarObjetoConClave($param);
             $nuevoArray['id_beneficio'] = $param['id_beneficio'];
-            $beneficioExiste = $this->buscar($nuevoArray); // verifico si el auto ya existe en la bd
+            $beneficioExiste = $this->buscar($nuevoArray); // verifico si el beneficio ya existe en la bd
             if ((count($beneficioExiste) > 0) and $elObjBeneficio != null and $elObjBeneficio->eliminar()) {
                 $resp = true;
             }
@@ -98,7 +98,7 @@ class AbmBeneficio
         if ($this->seteadosCamposClaves($param)) {
             $elObjBeneficio = $this->cargarObjeto($param);
             $nuevoArray['id_beneficio'] = $param['id_beneficio'];
-            $beneficioExiste = $this->buscar($nuevoArray); // verifico si el auto ya existe en la bd
+            $beneficioExiste = $this->buscar($nuevoArray); // verifico si el beneficio ya existe en la bd
             if ((count($beneficioExiste) > 0) and $elObjBeneficio != null and $elObjBeneficio->modificar()) {
                 $resp = true;
             }
@@ -120,7 +120,7 @@ class AbmBeneficio
             }
 
             if (isset($param['nombreBeneficio'])) {
-                $where .= " and Marca ='" . $param['marca'] . "'";
+                $where .= " and nombreBeneficio ='" . $param['nombreBeneficio'] . "'";
             }
 
             if (isset($param['id_actividad'])) {

@@ -1,7 +1,4 @@
-
-
 <?php
-
 include_once "../../configuracion.php";
 $objControl = new AbmCiudad;
 $letra = $_GET['param'];
@@ -21,7 +18,5 @@ $arr = array();
  }
  
  echo json_encode($arr);
-
-
 ?>
 

@@ -1,6 +1,7 @@
 // ------------------------------------------------------------------------------------------------------------------
 // EJERCICIO 1 - Combo Select Dinámico
 
+// CARGAR EL PRIMER SELECT (Actividades) AL CARGAR LA PÁGINA
 document.body.onload = function () {
     $('#lista_act').html('');
     $('#lista_act').html('<option selected="selected" disabled="disabled">Elija Actividad</option>');
@@ -12,12 +13,11 @@ document.body.onload = function () {
         }
     });
 }
-/* Carga en combo las distintas actividades existentes en BD */
+
+/* Carga los beneficios al cambiar la actividad */
 $(function () {
-
     $('#lista_act').on('change', function () {
-        if(!$('#msj').hasClass('d-none')){
-
+        if (!$('#msj').hasClass('d-none')) {
             $('#msj').toggleClass('d-none');
         }
         $('#resultado_combo').html('');
@@ -32,12 +32,10 @@ $(function () {
                 $('#lista_ben').html($('#lista_ben').html() + data);
             }
         });
-        return false;
     });
-    /* Select Beneficios  */
+
+    /* Al cambiar/seleccionar beneficio, mostrar mensaje final  */
     $('#lista_ben').on('change', function () {
-        console.log("entro");
-        
         $('#msj').removeClass('d-none');
         $('#resultado_combo').html('');
         $('#resultado_combo').html($('#resultado_combo').html() +
@@ -56,13 +54,10 @@ $(function () {
     $('#tabs_dinamicas a').click(function (e) {
         $('#tabs_dinamicas li').removeClass('on'); // remueve la clase 'on' a todos los elementos 'li' dentro de clase 'tabs_dinamicas'
         $(this).parent('li').addClass('on'); // this = elemento 'a'. Añade al padre 'li' la clase 'on'
-        var page = this.hash.substr(1); // Eliminar simbolo '#' de la cadena
-        // console.log(page);
-        $.get(page + '.php', function (gotHtml) {
-            // console.log(html);
-            $('#content').html(gotHtml);
+        var pagina = this.hash.substr(1); // Eliminar simbolo '#' de la cadena
+        $.get(pagina + '.php', function (contenido) {
+            $('#content').html(contenido);
         });
-        // return false;
     });
 
     // La propiedad location.hash establece o devuelve la parte ancla de una URL, incluido el signo de almohadilla (#).
@@ -74,19 +69,14 @@ $(function () {
 });
 
 // ------------------------------------------------------------------------------------------------------------------
+
+// ------------------------------------------------------------------------------------------------------------------
 // EJERCICIO 3 - Modal Dinámico
 
-
-$(document).ready(function () {
-    $('#content_src_bici').mouseenter(function () { 
-        $('#img_grande').html();
-    });
-});
-
 $(function () {
-    // Modal button click action
+    // Modal button accion al hacer click
     $('.modal-button').click(function (e) {
-        e.preventDefault();
+        e.preventDefault(); // Deshabilitar comportamiento por defecto al hacer click
         var $a_id = $(this).attr('id'); // atributo id tiene el formato 'content_src_*'
         $a_id = $a_id.substr(12); // elimino la parte 'content_src_'
         show_universal_modal($(this).attr('data-title'), $(this).attr('href'), $a_id);
@@ -94,21 +84,21 @@ $(function () {
 });
 
 function show_universal_modal($title, $link, $id = '') {
-    // Checking if link is empty then return false
+    // Verifica si link es vacío, entonces devuelve false
     if ($link == '') {
-        alert("Content Link is null");
+        alert("El contenido del link es nulo");
         return false;
     }
     $('#universal_modal').find('.modal-body').html("<center>Cargando datos. Por favor aguarde ...</center>");
     $('#universal_modal').find('.modal-title').html($title);
     $('#universal_modal').modal('show');
 
-    // Fetching content via Ajax
+    // Obtener contenido via Ajax
     $.ajax({
         url: $link,
         error: err => {
-            console.log(err);
-            $('#universal_modal').find('.modal-body').html("<div class='alert alert-danger'>Error fetching content.</div>");
+            $('#universal_modal').find('.modal-body').html("<div class='alert alert-danger'>Error al obtener contenido.</div>");
+            // En caso de error
         },
         success: function (resp) {
             $('.modal-body').html('');
@@ -121,27 +111,28 @@ function show_universal_modal($title, $link, $id = '') {
         }
     });
 
-
+    // Cargar tabla de la actividad física seleccionada
     var $tabla = 'modal/tabla_modal/' + $link.substr(6);
     $('.fondo-tabla').html('');
-    // Fetching content via Ajax
+    // Obtener contenido via Ajax
     $.ajax({
         url: $tabla,
         error: err => {
-            console.log(err);
+            alert('Hubo un problema al cargar la tabla. ' + err)
         },
         success: function (resp) {
             $('.fondo-tabla').html(resp);
         }
     });
 
+    // Cargar párrafo de la actividad física seleccionada
     $('.fondo-parrafo-final').html('');
     var $parrafo = 'modal/parrafo_modal/' + $link.substr(6);
-    // Fetching content via Ajax
+    // Obtener contenido via Ajax
     $.ajax({
         url: $parrafo,
         error: err => {
-            console.log(err);
+            alert('Hubo un problema al cargar el párrafo. ' + err)
         },
         success: function (resp) {
             $('.fondo-parrafo-final').html(resp);
@@ -150,9 +141,11 @@ function show_universal_modal($title, $link, $id = '') {
 }
 
 // ------------------------------------------------------------------------------------------------------------------
+
+// ------------------------------------------------------------------------------------------------------------------
 // EJERCICIO 4 - Formulario de registro
 
-// validar nombre en tiempo real
+// Validar campo nombre en tiempo real
 $(function () {
     $('#Nombre').val('') /* para que al recargar no queden los input con datos */
     $('#Nombre').bind("propertychange change keyup input paste", function () {
@@ -172,13 +165,13 @@ $(function () {
             $('#Nombre').addClass('border-danger');
             $('#NombreValidacion').html($mensajeValidacion);
         }
-        while(!$esNumero && $i < $campoNombre.length){
-            if(!isNaN($campoNombre[$i])){
+        while (!$esNumero && $i < $campoNombre.length) {
+            if (!isNaN($campoNombre[$i])) {
                 $esNumero = true;
             }
             $i++;
         }
-        if($esNumero){
+        if ($esNumero) {
             $mensajeValidacion = 'El nombre no puede contener números.';
             $('#Nombre').addClass('border-danger');
             $('#NombreValidacion').html($mensajeValidacion);
@@ -303,13 +296,13 @@ function validarDatos($campoNombre, $campoEmpresa, $campoTelefono, $campoMail, $
         $('#NombreValidacion').html($mensajeValidacion);
         $esValido = false;
     }
-    while(!$esNumero && $i < $campoNombre.length){
-        if(!isNaN($campoNombre[$i])){
+    while (!$esNumero && $i < $campoNombre.length) {
+        if (!isNaN($campoNombre[$i])) {
             $esNumero = true;
         }
         $i++;
     }
-    if($esNumero){
+    if ($esNumero) {
         $mensajeValidacion = 'El nombre no puede contener números.';
         $('#Nombre').addClass('border-danger');
         $('#NombreValidacion').html($mensajeValidacion);
@@ -375,7 +368,7 @@ function validarDatos($campoNombre, $campoEmpresa, $campoTelefono, $campoMail, $
     return $esValido;
 }
 
-
+// Al hacer click en boton enviar, valida todos los campos y obtiene respuesta mediante ajax
 $(function () {
     $('#Enviar').click(function () {
         var $campoNombre = document.getElementById('Nombre').value;
@@ -392,10 +385,10 @@ $(function () {
             var $ruta = 'Nombre=' + $campoNombre + '&Empresa=' + $campoEmpresa + '&Telefono=' + $campoTelefono + '&Mail=' + $campoMail + '&Comentario=' + $campoComentario;
             $('#resultadoRegistro').html('');
             $.ajax({
-                    url: 'http://localhost/pwa-2022/TP2/vista/accion/registrar_contacto.php',
-                    type: 'POST',
-                    data: $ruta,
-                })
+                url: 'http://localhost/pwa-2022/TP2/vista/accion/registrar_contacto.php',
+                type: 'POST',
+                data: $ruta,
+            })
                 .done(function (res) { // exito
                     $('#resultadoRegistro').removeClass('alert alert-danger');
                     $('#resultadoRegistro').addClass('alert alert-success');
@@ -406,15 +399,10 @@ $(function () {
                     $('#resultadoRegistro').removeClass('alert alert-success');
                     $('#resultadoRegistro').addClass('alert alert-danger');
                     $('#resultadoRegistro').html('<p><strong>Error</strong>. No se pudo registrar el contacto</p>');
-                })
-                .always(function () {
-                    console.log('Proceso de registro de contacto ajax completo');
                 });
 
         }
-
         irHaciaArriba();
-
     });
 });
 
@@ -443,42 +431,40 @@ function irHaciaArriba() {
     var body = $("html, body");
     body.stop().animate({
         scrollTop: 0
-    }, 900, 'swing', function () {});
+    }, 900, 'swing', function () { });
 }
 
 
 // ------------------------------------------------------------------------------------------------------------------
-// EJERCICIO 5 - Formulario de registro
+// EJERCICIO 5 - Tabla de contactos con paginación (Usando DataTable)
 
 $('th').addClass('text-center')
-
 $(document).ready(function () {
-    
 
     $('#listaContacto').DataTable({
         'ajax': {
             'url': '../vista/accion/listar_contactos.php',
-             'dataSrc': ''
+            'dataSrc': ''
 
         },
         'columns': [{
-                'data': 'idContacto'
-            },
-            {
-                'data': 'Nombre'
-            },
-            {
-                'data': 'Empresa'
-            },
-            {
-                'data': 'Telefono'
-            },
-            {
-                'data': 'Mail'
-            },
-            {
-                'data': 'Comentario'
-            },
+            'data': 'idContacto'
+        },
+        {
+            'data': 'Nombre'
+        },
+        {
+            'data': 'Empresa'
+        },
+        {
+            'data': 'Telefono'
+        },
+        {
+            'data': 'Mail'
+        },
+        {
+            'data': 'Comentario'
+        },
         ],
         'pageLength': 5,
         "language": {
@@ -496,40 +482,15 @@ $(document).ready(function () {
             },
             "sProcessing": "Procesando...",
         },
-        
+
     })
     $('#listaContacto_length').hide();
-    
 });
 
+// ------------------------------------------------------------------------------------------------------------------
 
 // ------------------------------------------------------------------------------------------------------------------
 // EJERCICIO 6 - Sugerencias  (CON DIV)
-
-// validar estado en tiempo real
-
-// $('#Estado').bind("propertychange change keyup input paste", function () {
-//     var $campoEstado = $('#Estado').val();
-//     var $sugerencias = document.getElementById('sugerenciaEstado');
-//     var xmlhttp;
-//     if(window.XMLHttpRequest){
-//         xmlhttp = new XMLHttpRequest();
-//     }else{
-//         xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
-//     }
-
-//     if($campoEstado.length === ''){
-//         $sugerencias.innerHTML = '';
-//     }else{
-//         xmlhttp.onreadystatechange = function(){
-//             if(xmlhttp.readyState === 4 && this.status === 200) {
-//                 $sugerencias.innerHTML = xmlhttp.responseText;
-//             }
-//         }
-//         xmlhttp.open('GET', 'http://localhost/pwa-2022/TP2/vista/accion/sugerir_estados.php?descripcion='+$campoEstado, true);
-//         xmlhttp.send();
-//     }
-// });
 
 //Alternativa 
 
@@ -558,13 +519,13 @@ $(document).ready(function () {
 //--------------------------------
 $(document).ready(function () {
     $('#Estado').val('')
-    $('#Estado').keyup(function () { 
+    $('#Estado').keyup(function () {
         var query = $(this).val();
         if (query != '') {
             $.ajax({
                 type: "get",
-                url: "accion/listar_ciudades2.php",
-                data: {param:query},
+                url: "accion/listar_estados.php",
+                data: { param: query },
                 success: function (data) {
                     $('#rta').fadeIn();
                     $('#rta').html(data);
@@ -572,11 +533,11 @@ $(document).ready(function () {
             });
         }
         var string = $('#Estado').val()
-        if(string.length == 0){
+        if (string.length == 0) {
             $('#Estado').val('');
         }
     });
-    $('#rta').on('click','li', function () {
+    $('#rta').on('click', 'li', function () {
         $('#Estado').val($(this).text());
         $('#rta').fadeOut();
     });

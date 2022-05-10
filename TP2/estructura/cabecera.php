@@ -173,7 +173,7 @@ include_once "../configuracion.php";
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item bg-warning text-wrap">
-                            <a class="nav-link text-center" href="https://drive.google.com/file/d/1WJz5wACYUUbsvBbEfmDCmlF_AbYg0qR2/view?usp=sharing" target="_blank">Grupo Amarillo</a>
+                            <a class="nav-link text-center" href="https://github.com/PabloDamianRomero/PWA-2022/blob/main/style/img/grupo_amarillo.png?raw=true" target="_blank">Grupo Amarillo</a>
                         </li>
                         <li class="nav-item">
                             <div class="dropdown">

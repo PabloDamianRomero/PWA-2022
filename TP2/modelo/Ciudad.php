@@ -1,18 +1,18 @@
 <?php
 
-class Ciudad {
+class Ciudad
+{
     private $id;
     private $descripcion;
     private $idPais;
     private $mensajeOperacion;
 
-
-    function __construct()
+    public function __construct()
     {
         $this->id = '';
         $this->descripcion = '';
         $this->idPais = '';
-    }    
+    }
 
     public function setear($id, $descr, $id_pais)
     {
@@ -22,25 +22,31 @@ class Ciudad {
 
     }
 
-    function getId(){
+    public function getId()
+    {
         return $this->id;
     }
 
-    function setId($id){
+    public function setId($id)
+    {
         $this->id = $id;
     }
-    function getIdPais(){
+    public function getIdPais()
+    {
         return $this->idPais;
     }
 
-    function setIdPais($idPais){
+    public function setIdPais($idPais)
+    {
         $this->idPais = $idPais;
     }
-    function getDescripcion(){
+    public function getDescripcion()
+    {
         return $this->descripcion;
     }
 
-    function setDescripcion($descripcion){
+    public function setDescripcion($descripcion)
+    {
         $this->descripcion = $descripcion;
     }
     public function getMensajeOperacion()
@@ -67,7 +73,7 @@ class Ciudad {
                 }
             }
         } else {
-            $this->setMensajeOperacion("Actividad->cargar: " . $base->getError());
+            $this->setMensajeOperacion("Ciudad->cargar: " . $base->getError());
         }
         return $resp;
     }
@@ -82,14 +88,13 @@ class Ciudad {
             if ($id = $base->Ejecutar($sql)) {
                 $resp = true;
             } else {
-                $this->setMensajeOperacion("Actividad->insertar: " . $base->getError());
+                $this->setMensajeOperacion("Ciudad->insertar: " . $base->getError());
             }
         } else {
-            $this->setMensajeOperacion("Actividad->insertar: " . $base->getError());
+            $this->setMensajeOperacion("Ciudad->insertar: " . $base->getError());
         }
         return $resp;
     }
-
 
     public function modificar()
     {
@@ -100,14 +105,13 @@ class Ciudad {
             if ($base->Ejecutar($sql)) {
                 $resp = true;
             } else {
-                $this->setMensajeOperacion("Actividad->modificar: " . $base->getError());
+                $this->setMensajeOperacion("Ciudad->modificar: " . $base->getError());
             }
         } else {
-            $this->setMensajeOperacion("Actividad->modificar: " . $base->getError());
+            $this->setMensajeOperacion("Ciudad->modificar: " . $base->getError());
         }
         return $resp;
     }
-
 
     public function eliminar()
     {
@@ -118,16 +122,14 @@ class Ciudad {
             if ($base->Ejecutar($sql)) {
                 return true;
             } else {
-                $this->setMensajeOperacion("Actividad->eliminar: " . $base->getError());
+                $this->setMensajeOperacion("Ciudad->eliminar: " . $base->getError());
             }
         } else {
-            $this->setMensajeOperacion("Actividad->eliminar: " . $base->getError());
+            $this->setMensajeOperacion("Ciudad->eliminar: " . $base->getError());
         }
         return $resp;
     }
 
-
-    
     public static function listar($condicion = "")
     {
         $arreglo = array();
@@ -140,22 +142,19 @@ class Ciudad {
         if ($res > -1) {
             if ($res > 0) {
                 while ($row = $base->Registro()) {
-                     $obj = new Ciudad();
+                    $obj = new Ciudad();
 
-                     $obj->setear($row['id'], $row['descripcion'],$row['idPais']);
+                    $obj->setear($row['id'], $row['descripcion'], $row['idPais']);
                     // $colBeneficio = $obj->getColObjBeneficio();
                     // $obj->setColObjBeneficio($colBeneficio);
                     array_push($arreglo, $obj);
                 }
             }
         } else {
-            $this->setMensajeOperacion("Actividad->listar: " . $base->getError());
+            $this->setMensajeOperacion("Ciudad->listar: " . $base->getError());
         }
         return $arreglo;
     }
 
 }
-
-
-
 ?>

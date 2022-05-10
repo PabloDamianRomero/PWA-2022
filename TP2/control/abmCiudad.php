@@ -1,6 +1,4 @@
 <?php
-// include_once '../modelo/Ciudad.php';
-// include_once '../modelo/conector/BaseDatos.php';
 class AbmCiudad
 {
 
@@ -61,7 +59,7 @@ class AbmCiudad
         $resp = false;
         $obj = $this->cargarObjeto($param);
         $nuevoArray['id'] = $param['id'];
-        $beneficioExiste = $this->buscar($nuevoArray); // verifico si el auto ya existe en la bd
+        $beneficioExiste = $this->buscar($nuevoArray); // verifico si la provincia ya existe en la bd
         if ((count($beneficioExiste) == 0) and $obj != null and $obj->insertar()) {
             $resp = true;
         }
@@ -78,7 +76,7 @@ class AbmCiudad
         if ($this->seteadosCamposClaves($param)) {
             $elObjBeneficio = $this->cargarObjetoConClave($param);
             $nuevoArray['id'] = $param['id'];
-            $beneficioExiste = $this->buscar($nuevoArray); // verifico si el auto ya existe en la bd
+            $beneficioExiste = $this->buscar($nuevoArray); // verifico si la provincia ya existe en la bd
             if ((count($beneficioExiste) > 0) and $elObjBeneficio != null and $elObjBeneficio->eliminar()) {
                 $resp = true;
             }
@@ -98,7 +96,7 @@ class AbmCiudad
         if ($this->seteadosCamposClaves($param)) {
             $elObjBeneficio = $this->cargarObjeto($param);
             $nuevoArray['id'] = $param['id'];
-            $beneficioExiste = $this->buscar($nuevoArray); // verifico si el auto ya existe en la bd
+            $beneficioExiste = $this->buscar($nuevoArray); // verifico si la provincia ya existe en la bd
             if ((count($beneficioExiste) > 0) and $elObjBeneficio != null and $elObjBeneficio->modificar()) {
                 $resp = true;
             }
@@ -130,13 +128,8 @@ class AbmCiudad
                 $where .= " and descripcion like  '" . $param['like'] . "%'";
             }
         }
-        // echo $where;
         $arreglo = Ciudad::listar($where);
         return $arreglo;
     }
 }
-
-// $obj = new AbmCiudad;
-// $where['idPais'] = 1;
-// $res = $obj->buscar($where);
-// print_r($res);
+?>

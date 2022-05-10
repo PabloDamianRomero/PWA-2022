@@ -74,7 +74,7 @@ class AbmContacto
         if ($this->seteadosCamposClaves($param)) {
             $elObjContacto = $this->cargarObjetoConClave($param);
             $nuevoArray['IdContacto'] = $param['IdContacto'];
-            $contactoExiste = $this->buscar($nuevoArray); // verifico si la actividad ya existe en la bd
+            $contactoExiste = $this->buscar($nuevoArray); // verifico si el contacto ya existe en la bd
             if ((count($contactoExiste) > 0) and $elObjContacto != null and $elObjContacto->eliminar()) {
                 $resp = true;
             }
@@ -94,7 +94,7 @@ class AbmContacto
         if ($this->seteadosCamposClaves($param)) {
             $elObjContacto = $this->cargarObjeto($param);
             $nuevoArray['IdContacto'] = $param['IdContacto'];
-            $contactoExiste = $this->buscar($nuevoArray); // verifico si la actividad ya existe en la bd
+            $contactoExiste = $this->buscar($nuevoArray); // verifico si el contacto ya existe en la bd
             if ((count($contactoExiste) > 0) and $elObjContacto != null and $elObjContacto->modificar()) {
                 $resp = true;
             }
@@ -104,10 +104,9 @@ class AbmContacto
 
     /**
      * permite buscar un objeto
-     * @param array 
-     * @return 
+     * @param array
+     * @return
      */
-    // public function setear($IdContacto, $Nombre, $Empresa, $Telefono, $Mail, $Comentario)
     public function buscar($param)
     {
 
