@@ -422,7 +422,8 @@ $(function () {
         $('#resultadoRegistro').html('');
         $('#resultadoRegistro').removeClass('alert alert-danger');
         $('#resultadoRegistro').removeClass('alert alert-success');
-        $('#sugerenciaEstado').html('');
+        $('#sugerenciaProvincia').html('');
+        $('#rta').html('');
     });
 });
 
