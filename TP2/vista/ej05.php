@@ -18,18 +18,18 @@ include_once "../estructura/cabecera.php";
 
 <section class="contenido-central contenido_ej5">
     <!-- ... -->
-    <div class="container shadow-lg">
+    <div class="container shadow-lg p-2" style="background-color: #cde3f4;">
         <div class="table-responsive">
-            <table id="listaContacto" class="table table-success table-hover" style="width:100%">
+            <table id="listaContacto" class="table table-light table-hover" style="width:100%">
 
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Nombre</th>
-                        <th>Empresa</th>
-                        <th>Telefono</th>
-                        <th>Mail</th>
-                        <th>Comentario</th>
+                <thead> 
+                    <tr class="text-light">
+                        <th class="bg-secondary">Id</th>
+                        <th class="bg-secondary">Nombre</th>
+                        <th class="bg-secondary">Empresa</th>
+                        <th class="bg-secondary">Teléfono</th>
+                        <th class="bg-secondary">Mail</th>
+                        <th class="bg-secondary">Comentario</th>
                     </tr>
                 </thead>
 
