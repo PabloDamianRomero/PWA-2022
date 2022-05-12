@@ -2,7 +2,7 @@
 // EJERCICIO 1 - Combo Select Dinámico
 
 // CARGAR EL PRIMER SELECT (Actividades) AL CARGAR LA PÁGINA
-document.body.onload = function () {
+$(document).ready(function () {
     $('#lista_act').html('');
     $('#lista_act').html('<option selected="selected" disabled="disabled">Elija Actividad</option>');
     $.ajax({
@@ -12,7 +12,7 @@ document.body.onload = function () {
             $('#lista_act').html($('#lista_act').html() + data);
         }
     });
-}
+});
 
 /* Carga los beneficios al cambiar la actividad */
 $(function () {
@@ -493,7 +493,7 @@ $(document).ready(function () {
 // EJERCICIO 6 - Sugerencias de estados/provincias
 
 // CARGAR EL SELECT (Pais) AL CARGAR LA PÁGINA
-document.body.onload = function () {
+$(document).ready(function () {
     $('#lista_pais').html('');
     $('#rta').html('');
     $.ajax({
@@ -503,7 +503,7 @@ document.body.onload = function () {
             $('#lista_pais').html($('#lista_pais').html() + data);
         }
     });
-}
+});
 
 // autocompletar con listas  input 
 //--------------------------------
