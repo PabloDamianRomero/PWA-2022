@@ -490,7 +490,53 @@ $(document).ready(function () {
 // ------------------------------------------------------------------------------------------------------------------
 
 // ------------------------------------------------------------------------------------------------------------------
-// EJERCICIO 6 - Sugerencias  (CON DIV)
+// EJERCICIO 6 - Sugerencias de estados/provincias
+
+// CARGAR EL SELECT (Pais) AL CARGAR LA PÁGINA
+document.body.onload = function () {
+    $('#lista_pais').html('');
+    $('#rta').html('');
+    $.ajax({
+        type: 'POST',
+        url: 'http://localhost/PWA-2022/TP2/vista/accion/listar_paises.php',
+        success: function (data) {
+            $('#lista_pais').html($('#lista_pais').html() + data);
+        }
+    });
+}
+
+// autocompletar con listas  input 
+//--------------------------------
+$(document).ready(function () {
+    $('#Estado').val('')
+    $('#Estado').keyup(function () {
+        var id_pais = $('#lista_pais').val();
+        var query = $(this).val();
+        if (query != '') {
+            $.ajax({
+                type: "POST",
+                url: "accion/listar_estados.php",
+                data: { param: query, pais: id_pais},
+                success: function (data) {
+                    $('#rta').fadeIn();
+                    $('#rta').html(data);
+                }
+            });
+        }
+        var string = $('#Estado').val()
+        if (string.length == 0) {
+            $('#Estado').val('');
+        }
+    });
+    $('#rta').on('click', 'li', function () {
+        $('#Estado').val($(this).text());
+        $('#rta').fadeOut();
+    });
+    $('#lista_pais').on('change', function () {
+        $('#rta').html('');
+    });
+});
+
 
 //Alternativa 
 
@@ -514,35 +560,6 @@ $(document).ready(function () {
 //          }
 //      })
 //  });
-
-// autocompletar con listas  input 
-//--------------------------------
-$(document).ready(function () {
-    $('#Estado').val('')
-    $('#Estado').keyup(function () {
-        var query = $(this).val();
-        if (query != '') {
-            $.ajax({
-                type: "get",
-                url: "accion/listar_estados.php",
-                data: { param: query },
-                success: function (data) {
-                    $('#rta').fadeIn();
-                    $('#rta').html(data);
-                }
-            });
-        }
-        var string = $('#Estado').val()
-        if (string.length == 0) {
-            $('#Estado').val('');
-        }
-    });
-    $('#rta').on('click', 'li', function () {
-        $('#Estado').val($(this).text());
-        $('#rta').fadeOut();
-    });
-});
-
 
 
 

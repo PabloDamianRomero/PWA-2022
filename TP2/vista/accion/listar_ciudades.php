@@ -1,6 +1,6 @@
 <?php
 include_once "../../configuracion.php";
-$objControl = new AbmCiudad;
+$objControl = new AbmEstado;
 $letra = $_GET['param'];
 $where['like'] = $letra;
 $data = $objControl->buscar($where);

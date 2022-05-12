@@ -61,18 +61,26 @@ include_once "../estructura/cabecera.php";
                 <p id="EmailValidacion" class="text-danger"></p>
             </div>
 
-            <!-- Estados input -->
-            <div class="form-outline mb-4">
-                <label class="form-label" for="Estado">Estado</label>
-                <input type="text" id="Estado" class="form-control" maxlength="100"/>
-                <p id="EstadoValidacion" class="text-danger"></p>
-                <div id="rta" class="text-danger overflow-auto" style="height:100px;"></div>
-            </div>
+            
+            <div class="row">
+                <!-- Selección de países -->
+                <div class="form-outline mb-4 col-md-6">
+                    <label class="form-label" for="Pais">Pais</label>
+                    <select class="form-select" id="lista_pais">
+                        <!-- ... -->
+                    </select>
+                </div>
 
-            <!-- este div corresponde con la primer opcion de js para mostrar sugerencias -->
-            <!-- <div id="sugerenciaEstado" class="text-center overflow-auto pt-2 pb-2 m-3" style="height:100px; background-color: #e9e9e9;"> -->
-                <!-- ... -->
-            <!-- </div> -->
+                <!-- Estados/Provincias input -->
+                <div class="form-outline mb-4 col-md-6">
+                    <label class="form-label" for="Estado">Estado/Provincia</label>
+                    <input type="text" id="Estado" class="form-control" maxlength="100"/>
+                    <p id="EstadoValidacion" class="text-danger"></p>
+                    <div id="rta" class="text-danger overflow-auto" style="height:100px;">
+                        <!-- ... -->
+                    </div>
+                </div>
+            </div>
             
             <!-- Comentarios -->
             <div class="form-outline mb-4">

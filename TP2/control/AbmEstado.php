@@ -1,5 +1,5 @@
 <?php
-class AbmCiudad
+class AbmEstado
 {
 
     /**
@@ -12,7 +12,7 @@ class AbmCiudad
         $obj = null;
 
         if (array_key_exists('id', $param) and array_key_exists('descripcion', $param) and array_key_exists('idPais', $param)) {
-            $obj = new Ciudad();
+            $obj = new Estado();
             $obj->setear($param['id'], $param['descripcion'], $param['idPais']);
         }
         return $obj;
@@ -28,7 +28,7 @@ class AbmCiudad
         $obj = null;
 
         if (isset($param['id'])) {
-            $obj = new Ciudad();
+            $obj = new Estado();
             $obj->setear($param['id'], null, null);
         }
         return $obj;
@@ -128,7 +128,7 @@ class AbmCiudad
                 $where .= " and descripcion like  '" . $param['like'] . "%'";
             }
         }
-        $arreglo = Ciudad::listar($where);
+        $arreglo = Estado::listar($where);
         return $arreglo;
     }
 }

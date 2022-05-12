@@ -1,6 +1,6 @@
 <?php
 
-class Ciudad
+class Estado
 {
     private $id;
     private $descripcion;
@@ -14,11 +14,11 @@ class Ciudad
         $this->idPais = '';
     }
 
-    public function setear($id, $descr, $id_pais)
+    public function setear($id, $descr, $idPais)
     {
         $this->setId($id);
         $this->setDescripcion($descr);
-        $this->setIdPais($id_pais);
+        $this->setIdPais($idPais);
 
     }
 
@@ -73,7 +73,7 @@ class Ciudad
                 }
             }
         } else {
-            $this->setMensajeOperacion("Ciudad->cargar: " . $base->getError());
+            $this->setMensajeOperacion("Estado->cargar: " . $base->getError());
         }
         return $resp;
     }
@@ -88,10 +88,10 @@ class Ciudad
             if ($id = $base->Ejecutar($sql)) {
                 $resp = true;
             } else {
-                $this->setMensajeOperacion("Ciudad->insertar: " . $base->getError());
+                $this->setMensajeOperacion("Estado->insertar: " . $base->getError());
             }
         } else {
-            $this->setMensajeOperacion("Ciudad->insertar: " . $base->getError());
+            $this->setMensajeOperacion("Estado->insertar: " . $base->getError());
         }
         return $resp;
     }
@@ -105,10 +105,10 @@ class Ciudad
             if ($base->Ejecutar($sql)) {
                 $resp = true;
             } else {
-                $this->setMensajeOperacion("Ciudad->modificar: " . $base->getError());
+                $this->setMensajeOperacion("Estado->modificar: " . $base->getError());
             }
         } else {
-            $this->setMensajeOperacion("Ciudad->modificar: " . $base->getError());
+            $this->setMensajeOperacion("Estado->modificar: " . $base->getError());
         }
         return $resp;
     }
@@ -122,10 +122,10 @@ class Ciudad
             if ($base->Ejecutar($sql)) {
                 return true;
             } else {
-                $this->setMensajeOperacion("Ciudad->eliminar: " . $base->getError());
+                $this->setMensajeOperacion("Estado->eliminar: " . $base->getError());
             }
         } else {
-            $this->setMensajeOperacion("Ciudad->eliminar: " . $base->getError());
+            $this->setMensajeOperacion("Estado->eliminar: " . $base->getError());
         }
         return $resp;
     }
@@ -142,7 +142,7 @@ class Ciudad
         if ($res > -1) {
             if ($res > 0) {
                 while ($row = $base->Registro()) {
-                    $obj = new Ciudad();
+                    $obj = new Estado();
 
                     $obj->setear($row['id'], $row['descripcion'], $row['idPais']);
                     // $colBeneficio = $obj->getColObjBeneficio();
@@ -151,7 +151,7 @@ class Ciudad
                 }
             }
         } else {
-            $this->setMensajeOperacion("Ciudad->listar: " . $base->getError());
+            $this->setMensajeOperacion("Estado->listar: " . $base->getError());
         }
         return $arreglo;
     }

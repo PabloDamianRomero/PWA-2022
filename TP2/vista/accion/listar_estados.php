@@ -1,9 +1,11 @@
 <?php
 include_once "../../configuracion.php";
 $data = data_submitted();
-$objControl = new AbmCiudad;
+$objControl = new AbmEstado;
 $letra = $data['param'];
+$id_pais = $data['pais'];
 $where['like'] = $letra;
+$where['idPais'] = $id_pais;
 $data = $objControl->buscar($where);
 $arr = array();
 //caso normal sugerencia

@@ -135,7 +135,6 @@ class AbmActividad
             $cadena .= '<option value="' . $item->getIdActividad() . '">' . $item->getNombreActividad() . '</option>';
         }
         return $cadena;
-
     }
 
 }
