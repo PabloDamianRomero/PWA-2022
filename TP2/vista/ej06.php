@@ -65,7 +65,7 @@ include_once "../estructura/cabecera.php";
             <div class="row">
                 <!-- Selección de países -->
                 <div class="form-outline mb-4 col-md-6">
-                    <label class="form-label" for="Pais">Pais</label>
+                    <label class="form-label" for="Pais">País</label>
                     <select class="form-select" id="lista_pais">
                         <!-- ... -->
                     </select>
