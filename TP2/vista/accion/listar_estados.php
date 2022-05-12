@@ -11,7 +11,7 @@ $arr = array();
 //caso normal sugerencia
 $cadenaLista = '<ul>';
 foreach ($data as $item) {
-    $cadenaLista .= "<li>" . $item->getDescripcion() . " </li>";
+    $cadenaLista .= "<li style='cursor: pointer;'>" . $item->getDescripcion() . " </li>";
     array_push($arr, $item->getDescripcion());
 }
 $cadenaLista .= '</ul>';

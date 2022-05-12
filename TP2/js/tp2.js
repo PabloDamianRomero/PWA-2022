@@ -495,6 +495,7 @@ $(document).ready(function () {
 // CARGAR EL SELECT (Pais) AL CARGAR LA PÁGINA
 $(document).ready(function () {
     $('#lista_pais').html('');
+    $('#sugerenciaProvincia').html('');
     $('#rta').html('');
     $.ajax({
         type: 'POST',
@@ -510,6 +511,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('#Estado').val('')
     $('#Estado').keyup(function () {
+        $('#sugerenciaProvincia').html('Seleccione con un clic');
         var id_pais = $('#lista_pais').val();
         var query = $(this).val();
         if (query != '') {
@@ -526,14 +528,18 @@ $(document).ready(function () {
         var string = $('#Estado').val()
         if (string.length == 0) {
             $('#Estado').val('');
+            $('#sugerenciaProvincia').html('');
         }
     });
     $('#rta').on('click', 'li', function () {
         $('#Estado').val($(this).text());
         $('#rta').fadeOut();
+        $('#sugerenciaProvincia').html('');
     });
     $('#lista_pais').on('change', function () {
         $('#rta').html('');
+        $('#sugerenciaProvincia').html('');
+        $('#Estado').val('')
     });
 });
 

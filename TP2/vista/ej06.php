@@ -75,8 +75,8 @@ include_once "../estructura/cabecera.php";
                 <div class="form-outline mb-4 col-md-6">
                     <label class="form-label" for="Estado">Estado/Provincia</label>
                     <input type="text" id="Estado" class="form-control" maxlength="100"/>
-                    <p id="EstadoValidacion" class="text-danger"></p>
-                    <div id="rta" class="text-danger overflow-auto" style="height:100px;">
+                    <p id="sugerenciaProvincia" class="text-secondary text-center"></p>
+                    <div id="rta" class="text-primary overflow-auto" style="height:100px;">
                         <!-- ... -->
                     </div>
                 </div>
