@@ -1,0 +1,32 @@
+[
+    {
+    "idBeneficio": 1,
+    "nombreBeneficio":"Relajación",
+    "idActividad": 1
+    },
+    {
+        "idBeneficio": 2,
+        "nombreBeneficio":"Coordinación",
+        "idActividad": 1
+    },
+    {
+        "idBeneficio": 3,
+        "nombreBeneficio":"Confianza",
+        "idActividad": 1
+    },
+    {
+        "idBeneficio": 4,
+        "nombreBeneficio":"Oxigenación",
+        "idActividad": 2
+    },
+    {
+        "idBeneficio": 5,
+        "nombreBeneficio":"Fortaleza",
+        "idActividad": 2
+    },
+    {
+        "idBeneficio": 6,
+        "nombreBeneficio":"Endorfinas",
+        "idActividad": 3
+    }
+]

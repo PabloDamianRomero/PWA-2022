@@ -1,0 +1,14 @@
+[
+    {
+    "idActividad": 1,
+    "nombreActividad":"Yoga"
+    },
+    {
+        "idActividad": 2,
+        "nombreActividad":"Bicicleta"
+    },
+    {
+        "idActividad": 3,
+        "nombreActividad":"Correr"
+    }
+]

@@ -1,38 +1,90 @@
 // ------------------------------------------------------------------------------------------------------------------
 // EJERCICIO 1 - Combo Select Dinámico
 
-// CARGAR EL PRIMER SELECT (Actividades) AL CARGAR LA PÁGINA
+/**
+ * -----------------
+ *  OPCION 1 (JSON)
+ * -----------------
+ */
+
+// CARGAR EL PRIMER SELECT (Actividades) AL CARGAR LA PÁGINA (CON Json)
 $(document).ready(function () {
     $('#lista_act').html('');
     $('#lista_act').html('<option selected="selected" disabled="disabled">Elija Actividad</option>');
     $.ajax({
         type: 'POST',
-        url: 'http://localhost/PWA-2022/TP2/vista/accion/listar_actividad.php',
+        url: 'http://localhost/PWA-2022/TP2/control/actividades.json',
         success: function (data) {
-            $('#lista_act').html($('#lista_act').html() + data);
+            $.each(data, function (index, item) {
+                $('#lista_act').html($('#lista_act').html() + '<option value="' + item.idActividad + '">' + item.nombreActividad + '</option>');
+            });
         }
     });
 });
 
-/* Carga los beneficios al cambiar la actividad */
+/**
+ * -----------------
+ *  OPCION 2 (BASE DE DATOS)
+ * -----------------
+ */
+
+// CARGAR EL PRIMER SELECT (Actividades) AL CARGAR LA PÁGINA (CON BASE DE DATOS -> TABLAS ACTIVIDAD y BENEFICIO)
+// $(document).ready(function () {
+//     $('#lista_act').html('');
+//     $('#lista_act').html('<option selected="selected" disabled="disabled">Elija Actividad</option>');
+//     $.ajax({
+//         type: 'POST',
+//         url: 'http://localhost/PWA-2022/TP2/vista/accion/listar_actividad.php',
+//         success: function (data) {
+//             $('#lista_act').html($('#lista_act').html() + data);
+//         }
+//     });
+// });
+
+
+/**
+ * /////////////////////////////////////////////////////////////////////////////////////////////////////////
+ */
+
+/* Carga los beneficios al cambiar la actividad (CON Json)*/
 $(function () {
     $('#lista_act').on('change', function () {
+        var idAct = $('#lista_act').val();
         if (!$('#msj').hasClass('d-none')) {
             $('#msj').toggleClass('d-none');
         }
         $('#resultado_combo').html('');
-        var id = $('#lista_act').val();
-        var url = 'http://localhost/pwa-2022/TP2/vista/accion/cargar_beneficio.php';
         $('#lista_ben').html('<option selected="selected" disabled="disabled">Elija beneficio</option>');
-        $.ajax({
-            type: 'POST',
-            url: url,
-            data: 'id=' + id,
-            success: function (data) {
-                $('#lista_ben').html($('#lista_ben').html() + data);
-            }
+        var beneficios = $.getJSON('http://localhost/PWA-2022/TP2/control/beneficios.json', function (data) {
+            $.each(data, function (index, item) {
+                if (item.idActividad == idAct) {
+                    $('#lista_ben').html($('#lista_ben').html() + '<option value="' + item.idBeneficio + '">' + item.nombreBeneficio + '</option>');
+                }
+            });
         });
     });
+
+
+    /* Carga los beneficios al cambiar la actividad (CON BASE DE DATOS -> TABLAS ACTIVIDAD y BENEFICIO)*/
+    // $(function () {
+    //     $('#lista_act').on('change', function () {
+    //         if (!$('#msj').hasClass('d-none')) {
+    //             $('#msj').toggleClass('d-none');
+    //         }
+    //         $('#resultado_combo').html('');
+    //         var id = $('#lista_act').val();
+    //         var url = 'http://localhost/pwa-2022/TP2/vista/accion/cargar_beneficio.php';
+    //         $('#lista_ben').html('<option selected="selected" disabled="disabled">Elija beneficio</option>');
+    //         $.ajax({
+    //             type: 'POST',
+    //             url: url,
+    //             data: 'id=' + id,
+    //             success: function (data) {
+    //                 $('#lista_ben').html($('#lista_ben').html() + data);
+    //             }
+    //         });
+    //     });
+
 
     /* Al cambiar/seleccionar beneficio, mostrar mensaje final  */
     $('#lista_ben').on('change', function () {
@@ -519,7 +571,7 @@ $(document).ready(function () {
             $.ajax({
                 type: "POST",
                 url: "accion/listar_estados.php",
-                data: { param: query, pais: id_pais},
+                data: { param: query, pais: id_pais },
                 success: function (data) {
                     $('#rta').fadeIn();
                     $('#rta').html(data);
@@ -545,7 +597,7 @@ $(document).ready(function () {
 });
 
 
-//Alternativa 
+//Alternativa
 
 // --------------------------------------------------------------
 // Autocompleta combo con BD usando interface ( widget jquery )
